@@ -1,0 +1,19 @@
+/* Customize the background color of the admin interface */
+body {
+    background-color: #f4f6f9; /* Light grey background */
+}
+
+/* Highlight important fields */
+.field-student_id {
+    background-color: #e8f1f2;
+}
+
+/* Add custom styling to the learner status */
+.status-green {
+    color: green;
+    font-weight: bold;
+}
+.status-red {
+    color: red;
+    font-weight: bold;
+}
