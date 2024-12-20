@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.http import JsonResponse, HttpResponse
@@ -10,6 +11,86 @@ import base64
 import json
 import wikipedia
 from .models import Learner
+from .models import Note
+from .forms import NoteForm
+from django.shortcuts import render, get_object_or_404
+
+
+def edit_note(request, note_id):
+    note = get_object_or_404(Note, id=note_id)
+    if request.method == 'POST':
+        form = NoteForm(request.POST, instance=note)
+        if form.is_valid():
+            form.save()
+            return render(request, 'edit_note.html', {
+                'form': form,
+                'message': 'Note updated successfully!'
+            })
+    else:
+        form = NoteForm(instance=note)
+    return render(request, 'edit_note.html', {'form': form})
+
+
+
+
+def note_detail(request, note_id):
+    note = get_object_or_404(Note, id=note_id)  # Fetch the note or return 404
+    return render(request, 'note_detail.html', {'note': note})
+
+
+# View to list all notes
+def note_list(request):
+    notes = Note.objects.all().order_by('-created_at')
+    return render(request, 'note_list.html', {'notes': notes})
+
+# View to add a new note
+def add_note(request):
+    if request.method == 'POST':
+        form = NoteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('note_list')  # Redirect to the list page
+    else:
+        form = NoteForm()
+    return render(request, 'add_note.html', {'form': form})
+
+def view_notes(request):
+    notes = Note.objects.all()  # Retrieve all notes
+    return render(request, 'view_notes.html', {'notes': notes})
+
+
+# View to delete a note
+def delete_note(request, note_id):
+    # Get the note object by its ID or return 404 if not found
+    note = get_object_or_404(Note, id=note_id)
+
+    # Delete the note
+    note.delete()
+
+    # Redirect the user back to the notes page (or wherever you want to send them)
+    return redirect('view_notes')
+
+
+def add_note(request):
+    if request.method == 'POST':
+        form = NoteForm(request.POST)
+        if form.is_valid():
+            note = form.save(commit=False)
+            note.user = request.user  # Associate the note with the currently logged-in user
+            note.save()
+            return redirect('note_list')  # Redirect to the notes list or another page
+    else:
+        form = NoteForm()
+    return render(request, 'add_note.html', {'form': form})
+
+
+
+
+def note_detail(request, id):
+    note = get_object_or_404(Note, id=id)
+    return render(request, 'note_detail.html', {'note': note})
+
+
 
 
 # Dashboard Page (Requires Login)
@@ -59,12 +140,16 @@ def support(request):
     return render(request, 'support.html')
 
 
+def view_notes(request):
+    notes = Note.objects.filter(user=request.user)  # Only notes for the logged-in user
+    return render(request, 'view_notes.html', {'notes': notes})
+
 # Wikipedia Page
 def wikipedia_page(request):
     topic = request.GET.get('topic', 'EMOBILIS')  # Default topic: EMOBILIS
 
     try:
-        summary = wikipedia.summary(topic, sentences=5)
+        summary = wikipedia.summary(topic, sentences=13)
         page_url = wikipedia.page(topic).url
     except wikipedia.exceptions.DisambiguationError:
         summary = f"Too many results for '{topic}'. Try being more specific."
@@ -171,3 +256,6 @@ def mpesa_callback(request):
         else:
             return JsonResponse({'status': 'error', 'message': 'Payment failed.'})
     return JsonResponse({'status': 'error', 'message': 'Invalid callback.'})
+
+
+

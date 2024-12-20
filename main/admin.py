@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import CustomUser, Learner, Course
 
+
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('email', 'date_joined', 'first_name', 'last_name')
     search_fields = ('email', 'first_name', 'last_name')
