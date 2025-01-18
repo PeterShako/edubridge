@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}
+Courses - EduBridge
+{% endblock %}
+
+{% block content %}
+
+<style>
+        body {
+            background-color: #E7DDFF;
+            color:rgb(0, 0, 0);
+        }
+
+.barr {
+    width: auto;
+    margin-bottom: 5px;
+
+
+}
+
+</style>
+
+
+<div class="container py-5">
+    <!-- Section Navigation -->
+    <div class=barr><nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4 rounded">
+        <a class="navbar-brand text-primary" href="#">Courses Navigation</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#courseNav" aria-controls="courseNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="courseNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#web-development">Web Development</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#data-science">Data Science</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#machine-learning">Machine Learning</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+</div> 
+ <!-- Web Development Course -->
+<div>    <section id="web-development" class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="text-primary">Full Web Development Course</h2>
+                <p class="lead">
+                    Learn to build responsive and dynamic websites using the latest technologies. This course is ideal for beginners and intermediate learners looking to gain hands-on experience in web development.
+                </p>
+                <h4>Modules:</h4>
+                <ul>
+                    <li>HTML, CSS, and JavaScript Fundamentals</li>
+                    <li>Responsive Design with Bootstrap</li>
+                    <li>Backend Development with Python and Django</li>
+                    <li>Database Management with SQL</li>
+                    <li>Deploying Websites to the Cloud</li>
+                </ul>
+                <h4>Duration:</h4>
+                <p>12 weeks (4 sessions per week)</p>
+                <h4>Prerequisites:</h4>
+                <p>Basic computer skills. No prior coding experience required.</p>
+                <h4>Benefits:</h4>
+                <p>
+                    By the end of this course, you will be able to build fully functional websites, understand backend development, and deploy your projects to live servers.
+                </p>
+                <div class="d-flex justify-content-between">
+                    <a href="#top" class="btn btn-outline-primary btn-sm mt-2">Back to Top</a>
+                    <a href="{% url 'dev' %}" class="btn btn-outline-primary btn-sm mt-2">View Course</a>
+                </div>
+            </div>
+</div>
+      <br>  
+      <br>    
+    <div><section id="data-science" class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="text-success">Data Science with Python</h2>
+                <p class="lead">
+                    Gain expertise in analyzing data, visualizing trends, and using Python for data manipulation. Perfect for anyone interested in working with large datasets and generating insights.
+                </p>
+                <h4>Modules:</h4>
+                <ul>
+                    <li>Introduction to Python for Data Science</li>
+                    <li>Data Cleaning and Manipulation with Pandas</li>
+                    <li>Data Visualization with Matplotlib and Seaborn</li>
+                    <li>Introduction to SQL for Data Queries</li>
+                    <li>Exploratory Data Analysis (EDA)</li>
+                </ul>
+                <h4>Duration:</h4>
+                <p>10 weeks (3 sessions per week)</p>
+                <h4>Prerequisites:</h4>
+                <p>Basic math knowledge and familiarity with Excel is a plus.</p>
+                <h4>Benefits:</h4>
+                <p>
+                    Upon completion, you'll be able to analyze datasets, build visualizations, and create Python scripts for data-driven projects.
+                </p>
+                <a href="#top" class="btn btn-outline-success btn-sm mt-2">Back to Top</a>
+            </div>
+            <div class="alert alert-warning mt-3" role="alert">
+            <strong>Coming Soon:</strong> Advanced Data Science Modules
+        </div>
+        </div>
+    </section></div>
+
+
+    <div><section id="machine-learning" class="mb-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="text-danger">Machine Learning Fundamentals</h2>
+                <p class="lead">
+                    Dive into the world of Artificial Intelligence by learning how to build and train machine learning models. This course will teach you the fundamentals of machine learning and its real-world applications.
+                </p>
+                <h4>Modules:</h4>
+                <ul>
+                    <li>Introduction to Machine Learning and AI</li>
+                    <li>Linear Regression and Classification Algorithms</li>
+                    <li>Working with Scikit-learn and TensorFlow</li>
+                    <li>Training and Evaluating Models</li>
+                    <li>Deploying Machine Learning Models</li>
+                </ul>
+                <h4>Duration:</h4>
+                <p>14 weeks (4 sessions per week)</p>
+                <h4>Prerequisites:</h4>
+                <p>Basic Python programming knowledge is recommended.</p>
+                <h4>Benefits:</h4>
+                <p>
+                    By the end of this course, you'll have hands-on experience in building machine learning models and understanding their applications.
+                </p>
+                <a href="#top" class="btn btn-outline-danger btn-sm mt-2">Back to Top</a>
+            </div>
+            <div class="alert alert-warning mt-3" role="alert">
+            <strong>Coming Soon:</strong> Advanced Machine Learning
+        </div>
+        </div>
+    </section></div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="notes-container">
+    <h1>Your Saved Notes</h1>
+    {% if notes %}
+        <ul>
+            {% for note in notes %}
+                <li>
+                    <h3>
+                        <a href="{% url 'note_detail' note.id %}">
+                            {{ note.title }}
+                        </a>
+                    </h3>
+                    <small>Created at: {{ note.created_at }}</small>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No notes found. Start adding some notes!</p>
+    {% endif %}
+</div>
+{% endblock %}

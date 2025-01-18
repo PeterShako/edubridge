@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #E7DDFF;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4"><b>EduBridge 2024 Class</b></h2>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Student ID</th>
+                <th>Full Name</th>
+                <th>Enrolled Courses</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for learner in learners %}
+            <tr>
+                <td>{{ learner.student_id }}</td>
+                <td>{{ learner.full_name }}</td>>
+                <td>
+                    {% for course in learner.enrolled_courses.all %}
+                    <span class="badge bg-info">{{ course.name }}</span>
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

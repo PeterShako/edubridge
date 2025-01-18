@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Border Attribute{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="content-container">
+    <h2>Lesson 7: Border Attribute</h2>
+    <p><strong>Border Attribute</strong><br>
+     HTML Tables allow you to arrange data into rows and columns on a web page, making it easy to display information like schedules, statistics, or other structured data in a clear format.</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Lesson 7: Border Attribute</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Tables - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <br>
+    
+    <p>We have already explained that the border attribute would display the grid lines or border of your table. If you do not want borders for your table, you can just omit the border attribute or set its value to zero. Conversely, if you want a thicker border on your table, you can put in a higher value for your border attribute, i.e.,</p>
+    <pre><code>&lt;table border="10"&gt;</code></pre>
+    <p>HTML Table Headers</p>
+    <p>If you need to include headers in your table, you would need to use the &lt;th&gt; tag instead of the &lt;td&gt; tag in your first &lt;tr&gt; set.</p>
+    <p>For example, to create the following table:</p>
+    <pre><code>
+    &lt;table border="1"&gt;
+    &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;th&gt;Header 3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Row 1, Column 1&lt;/td&gt;
+    &lt;td&gt;Row 1, Column 2&lt;/td&gt;
+    &lt;td&gt;Row 1, Column 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    </code></pre>
+    <p>7.4 Captioning a Table</p>
+    <p>A caption could be your table's title or short description. You can add this at the top or the bottom of your table, but within your &lt;table&gt; tags.</p>
+    <p>To add a caption, use this syntax:</p>
+    <pre><code>&lt;caption&gt;Title of Your Table&lt;/caption&gt;</code></pre>
+    <p>7.5 Working with cells that take up two rows or two columns</p>
+    <p>There are times when you need to have headers or cells that span two or more rows or columns. You can accomplish this using colspan or rowspan.</p>
+    <p>For example, to create this type of table:</p>
+    <pre><code>
+    &lt;table border="1"&gt;
+    &lt;tr&gt;
+    &lt;th&gt;Category&lt;/th&gt;
+    &lt;th colspan="3"&gt;Examples&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Fruits&lt;/td&gt;
+    &lt;td&gt;Apples&lt;/td&gt;
+    &lt;td&gt;Oranges&lt;/td&gt;
+    &lt;td&gt;Grapes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    </code></pre>
+    <p>Take note that your second header has the attribute colspan. Conversely, writing this code:</p>
+    <pre><code>
+    &lt;table border="1"&gt;
+    &lt;tr&gt;
+    &lt;th&gt;Department:&lt;/th&gt;
+    &lt;td&gt;Accounting&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;th rowspan="2"&gt;Contact Person:&lt;/th&gt;
+    &lt;td&gt;Freya Olsen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Maita Cot&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    </code></pre>
+    <p>would allow you to have a cell that spans two rows. Notice that the header for Contact Person has the attribute rowspan.</p>
+    <pre><code>
+    &lt;table border="1"&gt;
+    &lt;tr&gt;
+    &lt;th&gt;Department:&lt;/th&gt;
+    &lt;td&gt;Accounting&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;th rowspan="2"&gt;Contact Person:&lt;/th&gt;
+    &lt;td&gt;Freya Olsen&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Maita Cot&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    </code></pre>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson6' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'lesson8' %}')">Next</button>
+</div>
+{% endblock %}

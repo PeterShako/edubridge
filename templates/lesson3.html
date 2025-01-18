@@ -1,0 +1,386 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lesson 3: Attributes, Titles, Headings, Paragraphs{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="content-container">
+    <h2>Lesson 3: Attributes, Titles, Headings, Paragraphs</h2>
+
+    <p><strong>Attributes, Titles, Headings, Paragraphs</strong><br>
+       Among the myriad of HTML elements, attributes, headings, and paragraphs stand out as essential components. Attributes give additional information to HTML elements, headings structure your content hierarchically, and paragraphs break down text into readable chunks..</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Lesson 3: Attributes, Titles, Headings, Paragraphs</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Attributes - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+<br> <br>
+    <h3>Attributes</h3>
+    <p>Attributes provide additional information about HTML elements. They are always included in the opening tag of an element and are written as name-value pairs. For example, the <code>href</code> attribute in the <code>&lt;a&gt;</code> element specifies the URL of the link.</p>
+
+    <h3>Titles</h3>
+    <p>The <code>&lt;title&gt;</code> element is used to define the title of an HTML document. It is placed inside the <code>&lt;head&gt;</code> section and is displayed in the browser tab or window title bar.</p>
+
+    <h3>Headings</h3>
+    <p>Headings are used to define the structure of a webpage. There are six levels of headings in HTML, ranging from <code>&lt;h1&gt;</code> (the highest level) to <code>&lt;h6&gt;</code> (the lowest level). Headings are important for organizing content and improving readability.</p>
+
+    <h3>Paragraphs</h3>
+    <p>The <code>&lt;p&gt;</code> element is used to define paragraphs in HTML. It is a block-level element that creates a new paragraph for text content. Paragraphs are essential for separating and structuring text on a webpage.</p>
+
+    <h3>Practice Exercise</h3>
+    <p>Use the <code>&lt;p&gt;</code> element to create a paragraph of text on your webpage. Include a heading using the <code>&lt;h2&gt;</code> element and add an attribute to an HTML element.</p>
+
+
+
+    <p><strong>Attributes</strong><br>
+        Attributes provide additional information about HTML elements. They are always included in the opening tag of an element and are written as name-value pairs. For example, the <code>href</code> attribute in the <code>&lt;a&gt;</code> element specifies the URL of the link.</p> 
+<p>Another term you would need to know when it comes to HTML elements are attributes.               
+Attributes modify the tags where they appear. Attributes are name-value pairs, which            
+are separated by the equal sign. </p>
+ 
+<p>The HTML element &lt;a href="nextofkin.html"&gt;Next of kin&lt;/a&gt; contains the attribute          
+href="nextofkin.html". Attributes usually use the following syntax: 
+ 
+&lt;tag attribute="value of attribute"&gt;content&lt;/tag&gt; </p>
+ 
+<p>A lot of people confuse the alt attribute as a tag. It is not. The alt attribute modifies the                   
+&lt;img&gt;, &lt;area&gt;, &lt;input&gt; and &lt;applet&gt; tags, which makes it an attribute. </p>
+ 
+Some of the most commonly used attributes, aside from href and alt include: 
+<ul>
+    <li>align</li>
+    <li>bgcolor</li>
+    <li>src</li>
+    <li>height</li>
+    <li>width</li>
+    <li>value</li>
+    <li>href</li>
+    <li>hspace</li>
+    <li>id</li>
+    <li>class</li>
+    <li>style</li>
+    <li>title</li>
+    <li>dir</li>
+    <li>lang</li>
+</ul>
+
+<p><strong>Titles. Headings. Paragraphs</strong><br> 
+One of the things that you should realize when working with HTML is that it is not just a                   
+markup language that you need to use in order to create a Web page. HTML is highly                 
+readable and understandable, even though you are just looking at its code. For the              
+most part, you would see how everything is structured just by looking at its code. </p>
+ 
+<p>So looking at the source code, you would be able to look at an HTML document and                  
+understand how a page would look like. 
+With that in mind, you should be able to work pretty well with titles, paragraphs and                
+headings. </p>
+ 
+ 
+<p><strong>The Title Tag</strong><br> 
+<p>As with any book, article or any printed works, your HTML document should have a               
+title. 
+ 
+The title is required for all HTML documents and it comes with other benefits:</p> 
+<ul>
+    <li>It will identify what your document is all about.</li>
+    <li>Titles also show up on the browser window or tab, making it easy for people to identify which tab to click on to access your Web page if they have a lot of tabs open at the same time.</li>
+    <li>It is one of the things that search engines look at in order to determine the content of your page. Search engine result pages (SERPs) will display the title of your document as the result’s main heading. Ultimately, it will help you rank higher on search engines if you write your titles right.</li>
+    <li>It can be used by other systems such as WAIS searches and document archiving systems to identify your document.</li>
+    <li>Title tags are also used for bookmarks. So if you are in the habit of bookmarking pages, title tags would provide a good way to identify the pages in the future.</li>
+</ul>
+<p>The correct way to write your title is to use the following syntax:</p>
+<pre><code>&lt;title&gt; Write Your Document's Title Here. &lt;/title&gt;</code></pre>
+<p>You should place your title element within the &lt;head&gt; section of your HTML document.</p>
+<p>When you have the &lt;title&gt; in place, you can now start writing the content that is visible to humans. It's the content that you put within the &lt;body&gt; section of your HTML document.</p>
+
+
+
+<h3>Headings</h3>
+<p>Headings are important to use in your document. They give it some structure. HTML allows you to have six different headings: &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt; and &lt;h6&gt;.</p>
+<p>Headings follow the following syntax:</p>
+<pre><code>&lt;h1&gt;The texts for Heading 1 go here&lt;/h1&gt;
+&lt;h2&gt;The texts for Heading 2 go here&lt;/h2&gt;
+&lt;h3&gt;The texts for Heading 3 go here&lt;/h3&gt;
+&lt;h4&gt;The texts for Heading 4 go here&lt;/h4&gt;
+&lt;h5&gt;The texts for Heading 5 go here&lt;/h5&gt;
+&lt;h6&gt;The texts for Heading 6 go here&lt;/h6&gt;</code></pre>
+<p>You can use headings according to importance. For instance, you can use &lt;h1&gt; for your most important headings and &lt;h2&gt; to &lt;h6&gt; for your less important ones. You can also use headings to group and organize your content so that &lt;h1&gt; becomes your main section headings, while &lt;h2&gt; will introduce a subsection within your main section and &lt;h3&gt; will introduce further subsections within your &lt;h2&gt; subsection. If your page includes a title, you might want to use &lt;h1&gt; for the title, and &lt;h2&gt; for the main sections, and through &lt;h3&gt; for subsections.</p>
+
+<p>As such, it is very important to use headings to:</p>
+<ul>
+    <li>Make your document more readable.</li>
+    <li>Make your document easy to skim. By looking at the headings, readers would be able to know the content of your page, the main sections and subsections.</li>
+    <li>Headings can also help your page become more search engine friendly (SEO).</li>
+</ul>
+<p>When you have headings in your document, make use of the headings tag. There are other tags that you could use to achieve the same formatting as headings, but refrain from using them.</p>
+ 
+<p>For example: 
+&lt;big&gt;This Is a Heading&lt;/big&gt; 
+may be displayed the same way as 
+&lt;h1&gt;This Is a Heading &lt;/h1&gt; </p>
+ 
+<p>However, if you are looking at the source code, it would be much easier to know that                  
+&lt;h1&gt; is the main heading than if you use &lt;big&gt; and other similar tags.</p> 
+ 
+<p>Take note that headings are not formatting tags and that they do not tell the browser                
+how to display the content in any particular manner. It just so happens that most                
+browsers recognize headings and they have their own way of displaying these. The             
+different formatting you see for &lt;h1&gt;, &lt;h2&gt; through &lt;h6&gt; will depend on what browser you use. You can, however, format your headings to be displayed by using cascading            
+stylesheets.</p> 
+ 
+ 
+<p><strong>Paragraphs</strong><br> 
+
+<p>When working with HTML documents, you would need to use the paragraph tag &lt;p&gt; in                
+order to insert white space between two paragraphs. You can use the following syntax when writing a paragraph for your HTML document: 
+&lt;p&gt;Paragraph 1 starts here&lt;/p&gt;. 
+ 
+&lt;p&gt;The second paragraph would follow here.&lt;/p&gt; 
+It is important to remember that you would need to add the closing tag &lt;/p&gt; after you                  
+write every paragraph, because paragraphs are not empty elements. 
+ 
+You may skip on adding &lt;/p&gt; at the end, and most browsers will ignore it and display                  
+your paragraph right. But some browsers may return errors when you do not put              
+&lt;/p&gt;. And that's everything you need to know first about titles, headings and paragraphs             
+in HTML. </p>
+
+
+<p><strong>Unnumbered, Numbered, Definition and Nested Lists</strong><br>
+ There are two most common lists used in HTML and these are: 
+ <ul>
+ <li>Ordered list.</li> 
+ <li>Unordered list. </li>
+</ul>
+</p>
+ 
+ 
+<p><strong>Ordered Lists</strong></p>
+
+<p>You use ordered lists if the sequence of your items is important. Ordered lists              
+enumerate the various items on your list on separate lines. It will have less space in                
+between items, unlike when you use or paragraph tags. Lastly, ordered lists are             
+typically indented. The usual syntax for ordered lists is as follows:</P> 
+ <ul>
+ 
+ <li>&lt;ol&gt; </li>
+<li>&lt;li&gt;This is the first item on the list. &lt;/li&gt;</li> 
+<li>&lt;li&gt;This is the second item on the list. &lt;/li&gt;</li> 
+<li>&lt;li&gt;This is the third item on the list. &lt;/li&gt;</li> 
+<li>&lt;/ol&gt;</li> 
+
+</ul>
+ 
+<p>
+
+<strong>This will be displayed as:</strong>
+<ul> 
+<li>This is the first item on the list. </li>
+<li>This is the second item on the list. </li>
+<li>This is the third item on the list.</li>
+</ul>
+
+</p> 
+Attributes that you can use with ordered lists As with other tags, you can change how ordered lists look by adding attributes. Two of the most used attributes are type and start.</p>
+
+<p><strong>Type</strong> <br>
+Instead of numbers, you can also have letters and Roman numerals. Types and their              
+corresponding syntax are as follows: 
+&lt;ol type="a"&gt; will display a, b, c <br>
+&lt;ol type="A"&gt; will display A, B, C <br>
+&lt;ol type="i"&gt; will display i, ii, iii <br>
+&lt;ol type="I"&gt; will display I, II, III <br></p>
+
+<br>
+<p><strong>Start</strong> <br>
+You can have your ordered lists start with any number you want. For example: 
+&lt;ol start="3"&gt; 
+The resulting list will start with 3 accompanying the first item.<br> 
+&lt;ol start="3"&gt; <br>
+&lt;li&gt;This is the first item on the list.&lt;/li&gt; <br>
+&lt;li&gt;This is the second item on the list.&lt;/li&gt; <br>
+&lt;li&gt;This is the third item on the list.&lt;/li&gt; <br>
+&lt;/ol&gt; <br>
+<br>
+This will be displayed as: 
+<br>
+1. This is the first item on the list. <br>
+2. This is the second item on the list. <br>
+3. This is the third item on the list. <br>
+This is particularly useful if you have to interrupt your list to explain something. You can 
+start off where the previous list ends. </p>
+
+
+<p><strong>Unordered Lists</strong><br> 
+Unordered lists are also called bulleted lists and, unlike ordered lists, the sequence of 
+items is not important in this type of list. 
+Similar to ordered lists, each item in your list is presented on separate lines, introduced 
+by a bullet. Unordered lists are also indented. 
+You can create an unordered list by using the following syntax: <br>
+
+&lt;ul&gt; <br>
+&lt;li&gt;This is item #1.&lt;/li&gt; <br>
+&lt;li&gt;This is item #2.&lt;/li&gt; <br>
+&lt;li&gt;This is item #3.&lt;/li&gt; <br>
+&lt;/ul&gt; <br>
+<br>
+This will display as: <br>
+● This is item #1. <br>
+● This is item #2. <br>
+● This is item #3. <br></p>
+
+
+<p>Further, if you are using HTML versions earlier than HTML 4, you can change the 
+bullet by specifying the type. 
+For example, using: 
+ <br> 
+&lt;ul type="square"&gt; will display a square filled in bullet. <br>
+&lt;ul type="circle"&gt; will display a circle bullet that is not filled in. <br>While ordered and unordered lists are basic forms of lists, you might need to make use                
+of lists that have more information other than just list items. HTML can handle that as                
+well. Let us take a look at description lists and nested lists. </p>
+
+<p><strong>Description lists</strong><br> 
+Description lists allow you to have a description for each item on your list. <br>Unlike &lt;ol&gt;                
+and &lt;ul&gt;, you will not use &lt;li&gt; for list items. Instead, &lt;dl&gt; tags need &lt;dt&gt; for the list   items and &lt;dd&gt; for the description. Description lists are also known as definition lists. 
+ <br>
+The correct syntax would be: <br>
+&lt;dl&gt; <br>
+    &lt;dt&gt;This is item #1.&lt;/dt&gt; <br>
+    &lt;dd&gt; This is a description of item #1&lt;/dd&gt; <br>
+    &lt;dt&gt;This is item #2.&lt;/dt&gt; <br>
+&lt;dd&gt; This is a description of item #2&lt;/dd&gt; <br>
+&lt;/dl&gt; <br>
+The browser will display this as:<br> 
+This is item #1. <br>
+ This is a description of item #1 <br>
+This is item #2. <br>
+ This is a description of item #2 <br>
+As you can see, only the description is indented. 
+
+
+<p><strong>Nested lists</strong> <br>
+A nested list may be an unordered list or an ordered list where you can have sublists                  
+for any item you want. This is good if you have complicated lists wherein you might                
+need to enumerate another list for an item in your original list. Perhaps the simplest               
+way to describe nested lists is that it is a list within a list. <br>
+ 
+The correct syntax for nested lists would be: 
+<ul> 
+<li>This is item #1.</li> 
+<li>This is item #2. 
+<ul> 
+<li>This is item #2 (a).</li> 
+<li>This is item #2 (b).</li> 
+
+</li> 
+<li>This is item #3.</li> 
+</ul> 
+ 
+This would be displayed as: <br>
+● This is item #1. <br>
+● This is item #2. <br>
+○ This is item #2 (a). <br>
+○ This is item #2 (b). <br>
+● This is item #3. <br>
+ <br>
+If you need to use an ordered list, you can just replace &lt;ul&gt; with &lt;ol&gt;. For example: 
+&lt;ol&gt; <br>
+&lt;li&gt;Jeans&lt;/li&gt; <br>
+&lt;li&gt;Shirts <br>
+&lt;ul&gt; <br>
+&lt;li&gt;Navy blue.&lt;/li&gt; <br>
+&lt;li&gt;Plain white.&lt;/li&gt; <br>
+&lt;/ul&gt; <br>
+&lt;/li&gt; <br>
+&lt;li&gt;Shoes.&lt;/li&gt; <br>
+&lt;/ol&gt; <br>
+<br>
+Will be displayed as: <br> 
+1. Jeans <br>
+2. Shirts <br>
+● Navy blue. <br>
+● Plain white. <br>
+3. Shoes. <br>
+
+    
+
+    
+
+</div>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">    
+<button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+
+    <button onclick="navigateTo('{% url 'lesson2' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'lesson4' %}')">Next</button>
+</div>
+{% endblock %}

@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBridge File Manager</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            
+            background-color: #E7DDFF;
+            margin: 100;
+            padding: 200;
+            
+
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #E7DDFF;;
+            z-index: -1;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(212, 111, 111, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1d3557;
+        }
+        form button {
+            background-color: #1d3557;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #457b9d;
+        }
+        .file-list h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .file-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .file-list ul li {
+            background: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-list ul li a {
+            color: #1d3557;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .file-list ul li a:hover {
+            color: #e63946;
+        }
+        footer {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h2>EduBridge File Manager</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Upload</button>
+        </form>
+        <div class="file-list">
+            <h3>Uploaded Files</h3>
+            <ul>
+                {% for file in files %}
+                <li>
+                    <span>{{ file.name }}</span>
+                    <a href="{% url 'download_file' file.id %}">Download</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <footer style="color:red;" >&copy; <b>2024 EduBridge. All Rights Reserved.<b></footer>
+</body>
+</html>

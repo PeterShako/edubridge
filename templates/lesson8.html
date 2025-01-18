@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}More on tables{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="content-container">
+    <h2>Lesson 8: Making Data Easier to Read</h2>
+
+ 
+<p>Sometimes, when you work with blocks of data, it is difficult to read it because it is displayed too close to the border. This is where the attribute “cellpadding” comes in handy.</p>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <td>This cell is padded.</td>
+        <td>This cell is padded too.</td>
+    </tr>
+    <tr>
+        <td>The world is round.</td>
+        <td>The sky is grey.</td>
+    </tr>
+</table>
+
+<p>The resulting table will have your text with sufficient white space around it.</p>
+
+<p>A B<br>
+C D</p>
+
+<p>Instead of looking like this:</p>
+
+<p>A B<br>
+C D</p>
+
+<h3>HTML Tables Are Very Flexible</h3>
+
+<p>As you can see, HTML tables are very flexible. Aside from allowing you to have exactly the cells, rows and columns that you need, you can also put in any data you want. For example, you could have words, paragraphs, bulleted lists and even another table within a table.</p>
+
+<h3>Text Boxes and Other User Input "Thingamajigs"</h3>
+
+<p>HTML forms provide a great way to capture data from your website. A form in an HTML page can be used to submit data to a server for further processing.</p>
+
+<p>Each HTML form is introduced by the <code>&lt;form&gt;</code> tag, and is made up of different input elements. The <code>&lt;form&gt;</code> tag has several attributes that would tell the browser what to do with the information that is entered in the different fields. These attributes are:</p>
+
+<ul>
+    <li>action</li>
+    <li>method</li>
+</ul>
+
+<p>The action attribute tells your browser the location of the CGI script that you are going to use to process the form. On the other hand, the method attribute has two possible values, <code>method="get"</code> or <code>method="post"</code>, both of which specify a method of submitting data to the script you have specified in the action attribute.</p>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson7' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'lesson9' %}')">Next</button>
+</div>
+{% endblock %}

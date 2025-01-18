@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Attempts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #E7DDFF;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Attempts</h1>
+        <p id="attemptCount"></p>
+        <button onclick="checkEligibility()">Proceed</button>
+    </div>
+
+    <script>
+        function checkEligibility() {
+            const passed = localStorage.getItem("passed");
+            if (passed === "true") {
+                alert("You have passed! You may proceed.");
+                // Redirect to the next page or functionality
+                window.location.href = "dev.html";
+            } else {
+                alert("You cannot proceed until you pass the quiz.");
+            }
+        }
+
+        document.getElementById("attemptCount").textContent = 
+            `Total Attempts: ${localStorage.getItem("attempts") || 0}`;
+    </script>
+</body>
+</html>

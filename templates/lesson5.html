@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Images{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="content-container">
+<h2>Lesson 5: Images</h2>
+
+    <p><strong>Images</strong><br>
+      In the beginning, the web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added.</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Lesson 5: HTML Images</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Images - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <br>
+    <h2>Lesson 5: Images</h2>
+    <p><strong>Images</strong><br>Images are a big part of any Webpage. It helps to drive your point across and helps to get your site visitor's attention. How do you insert images into your page?</p>
+    <p>Images are a big part of any Webpage. It helps to drive your point across and helps to get your site visitor's attention. How do you insert images into your page?</p>
+
+    <p>You need to use this code:</p>
+    <pre><code>&lt;img src="imagefile.jpg" alt="image on your site" width="100" height="100"&gt;</code></pre>
+
+    <p>The <code>&lt;img&gt;</code> tag introduces an image, the attribute <code>src</code> or source allows you to point to your image file. The <code>alt</code> attribute stands for alternative text. This is what shows up when the image cannot be shown for some reason (slow Internet connection or server is not responding). The <code>width</code> and <code>height</code> attributes determine the dimensions of the image.</p>
+
+    <p>Take a note that you should use the full URL of the image if it is not hosted on the same directory as your HTML document.</p>
+    <p>For example:</p>
+    <pre><code>&lt;img src="http://www.whereisyourimage.net/imagefile.jpg" alt="image on another site" width="100" height="100"&gt;</code></pre>
+
+    <h3>The alt attribute</h3>
+    <p>It is very important that you should fill in the <code>alt</code> attribute. At the very least, it would give people an idea what the image is all about, even if they are not able to see it.</p>
+
+    <p>However, the <code>alt</code> attribute, which is most often mistakenly called the alt tag, also serves other purposes.</p>
+
+    <p>For example:</p>
+    <ul>
+        <li><strong>A blind person accessing your Website via a screen reader will hear the <code>alt</code> attribute, allowing him or her to "see" the image you have included in your page.</strong></li>
+        <li><strong>Text based browsers and search engines spiders will be able to read the <code>alt</code> attribute. Speaking of search engines, the <code>alt</code> attribute can also help to make your page or at least your image rank higher in search engine results pages. There is even speculation among SEO professionals that putting your keywords in the <code>alt</code> text actually has more weight than putting your keywords in the title or header tags. Also, image search services, such as Google Images, Yahoo Image Search and Bing Images, use the <code>alt</code> attribute.</strong></li>
+    </ul>
+
+    <h3>The width and height attributes</h3>
+    <p>When inserting an image, it would be a good practice to specify the <code>width</code> and <code>height</code> of the image. This way, the browser will know just how much space to leave for your image. This means that even though your image does not load right away, the page will still be properly laid out as if the image has already completely loaded.</p>
+
+    <p>It is also important to use the right proportions so that your image does not look distorted. For example, if you have an image that is 200 pixels wide and 200 pixels high, specifying a width and height of 200 pixels and 100 pixels respectively will result in the page showing a deformed image.</p>
+
+    <h3>Align your images</h3>
+    <p>It is also important to align your images. For example, you can have an image displayed at the center of the paragraph, or you could have it flushed to the right.</p>
+
+    <p>You could do this using the <code>align</code> attribute.</p>
+    <ul>
+        <li><strong>To align your images to the left, use <code>&lt;img align="left"&gt;</code></strong></li>
+        <li><strong>To align your images to the right, use <code>&lt;img align="right"&gt;</code></strong></li>
+        <li><strong>To align your images to the middle, use <code>&lt;img align="middle"&gt;</code></strong></li>
+        <li><strong>To align your images to the top, use <code>&lt;img align="top"&gt;</code></strong></li>
+        <li><strong>To align your images to the bottom, use <code>&lt;img align="bottom"&gt;</code></strong></li>
+    </ul>
+
+    <p>The <code>align</code> attribute for the <code>&lt;img&gt;</code> tag, however, has already been deprecated in HTML 4.01, and if you are using HTML 5, it is not supported anymore. You could still, however, use CSS to align your images by using the following syntax: <code>&lt;img style="float:right"&gt;</code> in order to align your image to the right.</p>
+
+    <h3>Adding links to your images</h3>
+    <p>Sometimes, you will want to use an image to link to another content. It could be another page or perhaps you would want to give people a larger view of the image you have used for your page.</p>
+
+    <p>You can add a link to your image by using this syntax:</p>
+    <pre><code>&lt;a href="page.html"&gt;&lt;img src="image.jpg" alt="image with link" width="100" height="100"&gt;&lt;/a&gt;</code></pre>
+
+    <p>That sounds simple enough. But what if you need to add two or more links to a single image? How do you do that?</p>
+
+    <p>Though it’s a bit outdated, you want to at least know about how you can create such things. An image map is what you would call a single image that has many hyperlinked areas. For example, if you have an image of a face and you would want to link the eyes to a page you call eye.html and the lips to lip.html, you would need to create an image map.</p>
+
+    <p>To create an image map, you would need to get the coordinates of your hotspots. Hotspots are those areas that are clickable within your image. To get the coordinates, you can use an image processing software or an online tool such as the Poor Person's Image Mapper.</p>
+
+    <p>Once you know the coordinates, you can now insert an image map into your page. You can use the following syntax:</p>
+
+    <pre><code>&lt;img src="face.jpg" usemap="#face"&gt;
+&lt;map name="face"&gt;
+&lt;area shape="rect" coords="0,0,129,129" href="eye.html"&gt;
+&lt;area shape="rect" coords="130,130,159,159" href="lip.html"&gt;
+&lt;/map&gt;</code></pre>
+
+    <p>In this image map, the rectangular area within the coordinates (0,0) and (129,129) is clickable and linked to the eye.html page. Similarly, the rectangular area within the coordinates (130,130) and (159,159) is also clickable, but this time it is linked to the lip.html page. There are other shapes that you could use:</p>
+
+    <pre><code>&lt;area shape="circle" coords="0,0,129,129" href="url"&gt;</code></pre>
+
+    <p>and</p>
+
+    <pre><code>&lt;area shape="polygon" coords="0,0,129,129 .., xn,yn" href="url"&gt;</code></pre>
+
+    <p>So that’s how you add images to your site.</p>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson4' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'lesson6' %}')">Next</button>
+</div>
+{% endblock %}

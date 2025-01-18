@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lesson 4: Linking HTML Pages{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="content-container">
+    <h2>Lesson 4: Linking HTML Pages</h2>
+
+    <p><strong>Linking HTML Pages</strong><br>
+       HTML links or hyperlinks connect one resource on the web to another. The resource may be an image, a web page, a program, a video clip, an audio clip, an element within a web page, etc, or anything that can be hosted on the internet.</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Lesson 4: Linking HTML Pages</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Links - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <br>
+
+    <p><strong>How to Make Links to Other Pages and Elsewhere</strong></p>
+    <p>As you already know, links are a vital part of Web pages. Links allow you to move 
+    smoothly from one page to another. It allows you to navigate from page to page. It also 
+    enables you to get more information about a certain topic. 
+    As such, there are a lot of different types of links that you should know when learning 
+    HTML. Let us first concentrate on the body of your HTML document. What are these 
+    link types that you should know about?</p>
+    <ul>
+        <li>Regular or text links</li>
+        <li>Image links</li>
+        <li>Links to email addresses</li>
+        <li>Placeholder or anchor Links</li>
+    </ul>
+    <h3>Regular or Text Links</h3>
+    <p>The most common type of link is the text link. These are text that are usually rendered                 
+    underlined and in blue, and allows you to visit a linked resource. 
+    To create a simple text link, use the <code>&lt;a&gt;</code> tag by following this syntax:</p>
+    <pre><code>&lt;a href="URL of page you want to link to"&gt;link text&lt;/a&gt;</code></pre>
+    <p><strong>What does this syntax mean?</strong></p>
+    <ul>
+        <li>The <code>&lt;a&gt;</code> tag opens the link element.</li>
+        <li>The href attribute will tell you the destination of the link.</li>
+        <li>The "link text" could be anything from a simple description of the linked page to                
+        something like "click here" or "visit the page."</li>
+        <li>The <code>&lt;/a&gt;</code> tag closes the element.</li>
+    </ul>
+    <p><strong>For example:</strong></p>
+    <pre><code>&lt;a href="http://www.google.com"&gt;Google It!&lt;/a&gt;</code></pre>
+    <p><strong>Would show as:</strong></p>
+    <p><a href="http://www.google.com">Google It!</a></p>
+    <p>Clicking on that link will take you to http://www.google.com. Take note that the             
+    destination URL does not have to be an HTML page or a Web page. Links could take                 
+    you to an image file, a Word document, a PDF file, or even audio, video and other                 
+    multimedia files.</p>
+    <h3>Image Links</h3>
+    <p>Sometimes, you would want to use an image instead of a text link. That is possible too.                 
+    To use an image as your link, use the following syntax:</p>
+    <pre><code>&lt;a href="URL"&gt;
+    &lt;img src="image.jpg" alt="alt text of image"&gt;&lt;/a&gt;</code></pre>
+    <p>On your page, the picture called image.jpg will be linked to any URL you have.</p>
+    <h3>Links to eMail Addresses</h3>
+    <p>Instead of an URL, image or video and other similar files, you could create an email                
+    link. An email link would open the user's default email client (Gmail, Outlook, Apple              
+    Mail, etc) and start a new message with the specified email addresses already filled              
+    into the TO: field. If you have also specified a subject, the subject line will also be filled                  
+    in automatically.</p>
+    <p><strong>How do you do this? Use the following syntax:</strong></p>
+    <pre><code>&lt;a href="mailto:you@yourdomain.com?Subject=Creating an email link!"&gt; Send me an 
+    email!&lt;/a&gt;</code></pre>
+    <p>On your page, this will show up as 
+    “Send me an email!”</p>
+    <p>When you click on that link, it will open your email client to compose a new message                 
+    window. On the TO field, you will see you@yourdomain.com already entered and the             
+    subject line will read as "Creating an email link!".</p>
+    <h3>Anchor Links</h3>
+    <p>There are times when you need to create links to different parts of your document. For                
+    example, FAQ pages usually have all the questions at the top of the page and then the                 
+    answers to these questions follow below.</p>
+    <p>A good way to create a link that would take your users to a specific spot of the same                    
+    page is by creating anchor links. To do this, you must first create a bookmark using the                  
+    "id" attribute.</p>
+    <p><strong>For example, the answer to question number 10 is "10. Yes, we do handle that." Look                
+    at your source code, find that corresponding line and just add the bookmark like this:</strong></p>
+    <pre><code>&lt;a id="AnswerTen"&gt;10. Yes, we do handle that.&lt;/a&gt;</code></pre>
+    <p><strong>At the top of your page, create a link to that bookmark, i.e.:</strong></p>
+    <pre><code>&lt;a href="#AnswerTen"&gt;Question 10: Do you handle HTML tutorials?&lt;/a&gt;</code></pre>
+    <p>On your page, Question 10 will be highlighted and when you click on it, it will take you                   
+    directly to the bookmarked answer below. Do not forget to add the # sign before the                
+    bookmark name when linking.</p>
+    <h3>Other considerations when creating links:</h3>
+    <ol>
+        <li>Take note that you can specify where a linked resource would be opened. It could                
+        be 
+        <ul>
+            <li>opened in the same page (default).</li>
+            <li>opened in a new window, in which case you would need to add the              
+            target="_blank" attribute to your link element.</li>
+        </ul>
+        If you are working with frames, there are also attributes that would allow you to specify                
+        on which frame the link would open.
+        <ul>
+            <li>target="_self" would open the link in the same frame where you clicked it.</li>
+            <li>target="_parent" would open the linked page in the parent frame.</li>
+            <li>target="_xyz" would open the linked page in the frame named "xyz".</li>
+        </ul>
+        </li>
+        <li><strong>Using absolute or relative URLs.</strong>
+        Absolute URLs specify the full URL, i.e. http://www.you.com/me.html. This is usually           
+        used when you are linking to another Web site on another domain.
+        Relative URLs, on the other hand, will not have the domain part, but instead it will be                 
+        written as me.html. This is usually used when you are linking to pages within your own                
+        domain.</li>
+    </ol>
+    
+
+</div>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson3' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'lesson5' %}')">Next</button>
+</div>
+{% endblock %}

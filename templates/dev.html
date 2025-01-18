@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+Courses - EduBridge
+{% endblock %}
+
+{% block content %}
+
+<style>
+        body {
+            background-color: #E7DDFF;
+            color:rgb(0, 0, 0);
+        }
+        .navbar {
+            margin-bottom: 30px;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 0px 15px 0px 15px;
+        }
+        .header h1 {
+            font-size: 3em;
+        }
+        .header p {
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .nav-tabs .nav-link {
+            background-color:rgba(15, 211, 246, 0.88);
+            border: none;
+            color: black;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #87CEEB;
+            color: white;
+        }
+
+        .xp-container{
+           background-color:rgba(15, 211, 246, 0.88);
+;
+        }
+
+
+    </style>
+
+
+<div class="header">
+        <h1>WEB DEVELOPMENT</h1>
+        <p>Full Course: HTML, CSS, Javascript and SQL</p>
+    </div>
+    <br>
+    
+    <ul class="nav nav-tabs" id="lessonTabs" role="tablist">
+
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson1-tab" href="{% url 'lesson1' %}">Lesson 1: Introduction to HTML</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson2-tab" href="{% url 'lesson2' %}">Lesson 2: Basic tags and elements</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson3-tab" href="{% url 'lesson3' %}">Lesson 3: Attributes, Titles, Headings, Paragraphs</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson4-tab" href="{% url 'lesson4' %}">Lesson 4: Linking HTML Pages</a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson5-tab" href="{% url 'lesson5' %}">Lesson 5: Images</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson6-tab" href="{% url 'lesson6' %}">Lesson 6: Tabular Data</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson7-tab" href="{% url 'lesson7' %}">Lesson 7: Border Attributes</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson8-tab" href="{% url 'lesson8' %}">Lesson 8: More on Tables</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lesson9-tab" href="{% url 'lesson9' %}">Lesson 9: Forms</a>
+        </li>
+    </ul>
+    
+            {% endblock %}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Course Assessment</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #E7DDFF;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Assessment</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What does HTML stand for?</p>
+                <input type="radio" name="q1" value="A"> A. Hyper Text Markup Language<br>
+                <input type="radio" name="q1" value="B"> B. Hyperlinks and Text Markup Language<br>
+                <input type="radio" name="q1" value="C"> C. Home Tool Markup Language<br>
+                <input type="radio" name="q1" value="D"> D. None of the above<br>
+            </div>
+            <div class="question">
+                <p>2. Which of these is a correct HTML element for a paragraph?</p>
+                <input type="radio" name="q2" value="A"> A. &lt;para&gt;<br>
+                <input type="radio" name="q2" value="B"> B. &lt;p&gt;<br>
+                <input type="radio" name="q2" value="C"> C. &lt;pg&gt;<br>
+                <input type="radio" name="q2" value="D"> D. &lt;paragraph&gt;<br>
+            </div>
+            <div class="question">
+                <p>3. Who is making the Web standards?</p>
+                <input type="radio" name="q3" value="A"> A. Mozilla<br>
+                <input type="radio" name="q3" value="B"> B. Microsoft<br>
+                <input type="radio" name="q3" value="C"> C. The World Wide Web Consortium<br>
+                <input type="radio" name="q3" value="D"> D. Google<br>
+            </div>
+            <div class="question">
+                <p>4. Choose the correct HTML element for the largest heading:</p>
+                <input type="radio" name="q4" value="A"> A. &lt;heading&gt;<br>
+                <input type="radio" name="q4" value="B"> B. &lt;h6&gt;<br>
+                <input type="radio" name="q4" value="C"> C. &lt;h1&gt;<br>
+                <input type="radio" name="q4" value="D"> D. &lt;head&gt;<br>
+            </div>
+            <div class="question">
+                <p>5. What is the correct HTML element for inserting a line break?</p>
+                <input type="radio" name="q5" value="A"> A. &lt;br&gt;<br>
+                <input type="radio" name="q5" value="B"> B. &lt;lb&gt;<br>
+                <input type="radio" name="q5" value="C"> C. &lt;break&gt;<br>
+                <input type="radio" name="q5" value="D"> D. &lt;linebreak&gt;<br>
+            </div>
+            <div class="question">
+                <p>6. What is the correct HTML for adding a background color?</p>
+                <input type="radio" name="q6" value="A"> A. &lt;body bg="yellow"&gt;<br>
+                <input type="radio" name="q6" value="B"> B. &lt;body style="background-color:yellow;"&gt;<br>
+                <input type="radio" name="q6" value="C"> C. &lt;background&gt;yellow&lt;/background&gt;<br>
+                <input type="radio" name="q6" value="D"> D. &lt;bg&gt;yellow&lt;/bg&gt;<br>
+            </div>
+            <div class="question">
+                <p>7. Choose the correct HTML element to define important text:</p>
+                <input type="radio" name="q7" value="A"> A. &lt;important&gt;<br>
+                <input type="radio" name="q7" value="B"> B. &lt;strong&gt;<br>
+                <input type="radio" name="q7" value="C"> C. &lt;i&gt;<br>
+                <input type="radio" name="q7" value="D"> D. &lt;b&gt;<br>
+            </div>
+            <div class="question">
+                <p>8. Choose the correct HTML element to define emphasized text:</p>
+                <input type="radio" name="q8" value="A"> A. &lt;i&gt;<br>
+                <input type="radio" name="q8" value="B"> B. &lt;em&gt;<br>
+                <input type="radio" name="q8" value="C"> C. &lt;italic&gt;<br>
+                <input type="radio" name="q8" value="D"> D. &lt;b&gt;<br>
+            </div>
+            <div class="question">
+                <p>9. What is the correct HTML for creating a hyperlink?</p>
+                <input type="radio" name="q9" value="A"> A. &lt;a href="http://www.example.com"&gt;Example&lt;/a&gt;<br>
+                <input type="radio" name="q9" value="B"> B. &lt;a url="http://www.example.com"&gt;Example&lt;/a&gt;<br>
+                <input type="radio" name="q9" value="C"> C. &lt;a link="http://www.example.com"&gt;Example&lt;/a&gt;<br>
+                <input type="radio" name="q9" value="D"> D. &lt;a&gt;http://www.example.com&lt;/a&gt;<br>
+            </div>
+            <div class="question">
+                <p>10. Which character is used to indicate an end tag?</p>
+                <input type="radio" name="q10" value="A"> A. /<br>
+                <input type="radio" name="q10" value="B"> B. *<br>
+                <input type="radio" name="q10" value="C"> C. &lt;<br>
+                <input type="radio" name="q10" value="D"> D. ^<br>
+            </div>
+            <div class="question">
+                <p>11. How can you open a link in a new tab/browser window?</p>
+                <input type="radio" name="q11" value="A"> A. &lt;a href="url" new&gt;<br>
+                <input type="radio" name="q11" value="B"> B. &lt;a href="url" target="_blank"&gt;<br>
+                <input type="radio" name="q11" value="C"> C. &lt;a href="url" target="new"&gt;<br>
+                <input type="radio" name="q11" value="D"> D. &lt;a href="url" target="new_tab"&gt;<br>
+            </div>
+            <div class="question">
+                <p>12. Which of these elements are all <b>table</b> elements?</p>
+                <input type="radio" name="q12" value="A"> A. &lt;table&gt;&lt;tr&gt;&lt;tt&gt;<br>
+                <input type="radio" name="q12" value="B"> B. &lt;table&gt;&lt;tr&gt;&lt;td&gt;<br>
+                <input type="radio" name="q12" value="C"> C. &lt;thead&gt;&lt;body&gt;&lt;tr&gt;<br>
+                <input type="radio" name="q12" value="D"> D. &lt;table&gt;&lt;head&gt;&lt;tfoot&gt;<br>
+            </div>
+            <div class="question">
+                <p>13. How can you make a numbered list?</p>
+                <input type="radio" name="q13" value="A"> A. &lt;dl&gt;<br>
+                <input type="radio" name="q13" value="B"> B. &lt;ol&gt;<br>
+                <input type="radio" name="q13" value="C"> C. &lt;ul&gt;<br>
+                <input type="radio" name="q13" value="D"> D. &lt;list&gt;<br>
+            </div>
+            <div class="question">
+                <p>14. How can you make a bulleted list?</p>
+                <input type="radio" name="q14" value="A"> A. &lt;ul&gt;<br>
+                <input type="radio" name="q14" value="B"> B. &lt;ol&gt;<br>
+                <input type="radio" name="q14" value="C"> C. &lt;dl&gt;<br>
+                <input type="radio" name="q14" value="D"> D. &lt;list&gt;<br>
+            </div>
+            <div class="question">
+                <p>15. What is the correct HTML for making a text input field?</p>
+                <input type="radio" name="q15" value="A"> A. &lt;input type="text"&gt;<br>
+                <input type="radio" name="q15" value="B"> B. &lt;textfield&gt;<br>
+                <input type="radio" name="q15" value="C"> C. &lt;textinput type="text"&gt;<br>
+                <input type="radio" name="q15" value="D"> D. &lt;input type="textfield"&gt;<br>
+            </div>
+            <div class="question">
+                <p>16. What is the correct HTML for making a drop-down list?</p>
+                <input type="radio" name="q16" value="A"> A. &lt;input type="dropdown"&gt;<br>
+                <input type="radio" name="q16" value="B"> B. &lt;select&gt;<br>
+                <input type="radio" name="q16" value="C"> C. &lt;list&gt;<br>
+                <input type="radio" name="q16" value="D"> D. &lt;dropdown&gt;<br>
+            </div>
+            <div class="question">
+                <p>17. What is the correct HTML for making a checkbox?</p>
+                <input type="radio" name="q17" value="A"> A. &lt;input type="check"&gt;<br>
+                <input type="radio" name="q17" value="B"> B. &lt;check&gt;<br>
+                <input type="radio" name="q17" value="C"> C. &lt;input type="checkbox"&gt;<br>
+                <input type="radio" name="q17" value="D"> D. &lt;checkbox&gt;<br>
+            </div>
+            <div class="question">
+                <p>18. What is the correct HTML for making a text area?</p>
+                <input type="radio" name="q18" value="A"> A. &lt;input type="textarea"&gt;<br>
+                <input type="radio" name="q18" value="B"> B. &lt;textarea&gt;<br>
+                <input type="radio" name="q18" value="C"> C. &lt;input type="textbox"&gt;<br>
+                <input type="radio" name="q18" value="D"> D. &lt;textbox&gt;<br>
+            </div>
+            <div class="question">
+                <p>19. What is the correct HTML for inserting an image?</p>
+                <input type="radio" name="q19" value="A"> A. &lt;img href="image.gif" alt="MyImage"&gt;<br>
+                <input type="radio" name="q19" value="B"> B. &lt;img alt="MyImage"&gt;image.gif&lt;/img&gt;<br>
+                <input type="radio" name="q19" value="C"> C. &lt;img src="image.gif" alt="MyImage"&gt;<br>
+                <input type="radio" name="q19" value="D"> D. &lt;image src="image.gif" alt="MyImage"&gt;<br>
+            </div>
+            <div class="question">
+                <p>20. What is the correct HTML for inserting a background image?</p>
+                <input type="radio" name="q20" value="A"> A. &lt;body bg="background.gif"&gt;<br>
+                <input type="radio" name="q20" value="B"> B. &lt;body style="background-image:url('background.gif');"&gt;<br>
+                <input type="radio" name="q20" value="C"> C. &lt;background img="background.gif"&gt;<br>
+                <input type="radio" name="q20" value="D"> D. &lt;bg src="background.gif"&gt;<br>
+            </div>
+            <div class="question">
+                <p>21. An &lt;iframe&gt; is used to display a web page within a web page.</p>
+                <input type="radio" name="q21" value="A"> A. True<br>
+                <input type="radio" name="q21" value="B"> B. False<br>
+            </div>
+            <div class="question">
+                <p>22. HTML comments start with &lt;!-- and end with --&gt;</p>
+                <input type="radio" name="q22" value="A"> A. True<br>
+                <input type="radio" name="q22" value="B"> B. False<br>
+            </div>
+            <div class="question">
+                <p>23. Block elements are normally displayed without starting a new line.</p>
+                <input type="radio" name="q23" value="A"> A. True<br>
+                <input type="radio" name="q23" value="B"> B. False<br>
+            </div>
+            <div class="question">
+                <p>24. Which HTML element is used to specify a footer for a document or section?</p>
+                <input type="radio" name="q24" value="A"> A. &lt;bottom&gt;<br>
+                <input type="radio" name="q24" value="B"> B. &lt;footer&gt;<br>
+                <input type="radio" name="q24" value="C"> C. &lt;section&gt;<br>
+                <input type="radio" name="q24" value="D"> D. &lt;foot&gt;<br>
+            </div>
+            <div class="question">
+                <p>25. Which HTML element is used to specify a header for a document or section?</p>
+                <input type="radio" name="q25" value="A"> A. &lt;head&gt;<br>
+                <input type="radio" name="q25" value="B"> B. &lt;header&gt;<br>
+                <input type="radio" name="q25" value="C"> C. &lt;top&gt;<br>
+                <input type="radio" name="q25" value="D"> D. &lt;section&gt;<br>
+            </div>
+            <div class="question">
+                <p>26. Which HTML element is used to define navigation links?</p>
+                <input type="radio" name="q26" value="A"> A. &lt;navigate&gt;<br>
+                <input type="radio" name="q26" value="B"> B. &lt;navigation&gt;<br>
+                <input type="radio" name="q26" value="C"> C. &lt;nav&gt;<br>
+                <input type="radio" name="q26" value="D"> D. &lt;links&gt;<br>
+            </div>
+            <div class="question">
+                <p>27. Which HTML element is used to specify a section of a document?</p>
+                <input type="radio" name="q27" value="A"> A. &lt;section&gt;<br>
+                <input type="radio" name="q27" value="B"> B. &lt;div&gt;<br>
+                <input type="radio" name="q27" value="C"> C. &lt;article&gt;<br>
+                <input type="radio" name="q27" value="D"> D. &lt;aside&gt;<br>
+            </div>
+            <div class="question">
+                <p>28. Which HTML element is used to specify an article?</p>
+                <input type="radio" name="q28" value="A"> A. &lt;article&gt;<br>
+                <input type="radio" name="q28" value="B"> B. &lt;section&gt;<br>
+                <input type="radio" name="q28" value="C"> C. &lt;div&gt;<br>
+                <input type="radio" name="q28" value="D"> D. &lt;aside&gt;<br>
+            </div>
+            <div class="question">
+                <p>29. Which HTML element is used to specify content aside from the content it is placed in?</p>
+                <input type="radio" name="q29" value="A"> A. &lt;aside&gt;<br>
+                <input type="radio" name="q29" value="B"> B. &lt;section&gt;<br>
+                <input type="radio" name="q29" value="C"> C. &lt;div&gt;<br>
+                <input type="radio" name="q29" value="D"> D. &lt;footer&gt;<br>
+            </div>
+            <div class="question">
+                <p>30. Which HTML element is used to specify a section that is quoted from another source?</p>
+                <input type="radio" name="q30" value="A"> A. &lt;quote&gt;<br>
+                <input type="radio" name="q30" value="B"> B. &lt;blockquote&gt;<br>
+                <input type="radio" name="q30" value="C"> C. &lt;q&gt;<br>
+                <input type="radio" name="q30" value="D"> D. &lt;cite&gt;<br>
+            </div>
+            
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        <button type="button" onclick="window.location.href='courses.html'" style="background: #FF0000; margin-top: 10px;">Quit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            const totalQuestions = 30; 
+            const passingScore = 0.6 * totalQuestions; // 60% passing 
+            const answers = {
+                q1: "A", 
+                q2: "B",
+                q3: "C",
+                q4: "C",
+                q5: "A",
+                q6: "B",
+                q7: "B",
+                q8: "B",
+                q9: "A",
+                q10: "A",
+                q11: "B",
+                q12: "B",
+                q13: "B",
+                q14: "A",
+                q15: "A",
+                q16: "B",
+                q17: "C",
+                q18: "B",
+                q19: "C",
+                q20: "B",
+                q21: "True",
+                q22: "True",
+                q23: "False",
+                q24: "B",
+                q25: "B",
+                q26: "C",
+                q27: "A",
+                q28: "A",
+                q29: "A",
+                q30: "B"
+            };
+            
+            let score = 0;
+
+            for (let key in answers) {
+                const selectedOption = document.querySelector(`input[name="${key}"]:checked`);
+                if (selectedOption && selectedOption.value === answers[key]) {
+                    score++;
+                }
+            }
+
+
+            let attempts = localStorage.getItem("attempts") || 0;
+            attempts++;
+            localStorage.setItem("attempts", attempts);
+
+            if (score >= passingScore) {
+                alert(`Congratulations! You passed with a score of ${score}/${totalQuestions}.`);
+                localStorage.setItem("passed", true);
+                window.location.href = "attempts.html"; // Redirect to attempts page
+            } else {
+                alert(`You failed with a score of ${score}/${totalQuestions}. Please try again.`);
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

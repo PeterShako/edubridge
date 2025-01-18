@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}
+About Us - EduBridge
+{% endblock %}
+
+{% block content %}
+
+<style>
+        body {
+            background-color: #E7DDFF;
+        }
+</style>
+
+<div class="container py-5">
+    <div class="row">
+        <!-- Introduction Section -->
+        <div class="col-lg-6 col-md-12">
+            <h1 class="display-4 text-primary">About EduBridge</h1>
+            <p class="lead">
+                At <strong>EduBridge</strong>, we are committed to bridging the gap in education by leveraging the power of technology and innovation. Our mission is to empower learners of all ages and backgrounds to access high-quality resources, develop critical skills, and achieve their dreams.
+            </p>
+            <p>
+                Since our inception, we have provided students with the tools they need to succeed in today's competitive world. Whether you are looking to start a career in tech, upgrade your current skills, or simply learn something new, EduBridge is here to support you every step of the way.
+            </p>
+        </div>
+        <div class="col-lg-6 col-md-12 text-center">
+            <img src="/static/images/33.png" class="img-fluid rounded shadow-lg" alt="Learning Together" style="width: 900px; height: 360px;">
+        </div>
+    </div>
+
+    <!-- Vision and Mission Section -->
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card shadow border-primary">
+                <div class="card-body" style="width: autopx; height: 170px;">
+                    <h3 class="card-title text-primary">Our Vision</h3>
+                    <p class="card-text">
+                        To create a world where education is accessible, affordable, and inclusive for everyone. We aim to become a leading platform that connects learners, educators, and employers in a seamless digital ecosystem.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow border-success">
+                <div class="card-body" style="width: autopx; height: 170px;">
+                    <h3 class="card-title text-success">Our Mission</h3>
+                    <p class="card-text">
+                        To empower individuals with knowledge and skills through innovative learning solutions. Our mission is to help every learner realize their full potential and unlock new opportunities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Values Section -->
+    <div class="mt-5">
+        <h2 class="text-center text-primary mb-4">Our Core Values</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm border-info">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-info">Integrity</h4>
+                        <p class="card-text">
+                            We uphold honesty and transparency in everything we do.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-warning">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-warning">Innovation</h4>
+                        <p class="card-text">
+                            We strive to continuously innovate and improve our learning solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm border-danger">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-danger">Excellence</h4>
+                        <p class="card-text">
+                            We are committed to delivering high-quality services to our learners.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Call to Action Section -->
+    <div class="mt-5 text-center py-4 bg-light rounded shadow">
+        <h3>Join the EduBridge Community Today!</h3>
+        <p>Take the first step toward achieving your goals. Reach out to us and connect with a community of passionate learners.</p>
+        <a href="/contact/" class="btn btn-primary btn-lg">Contact Us</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lesson 1: Introduction to HTML{% endblock %}
+
+{% block content %}
+<style>
+    .body {
+        background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #4a4a4a;
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+        margin-right: 10px;
+        justify: center;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+
+<div class="content-container">
+    <h2>Lesson 1: Introduction to HTML</h2>
+
+    <p><strong>What is HTML?</strong><br>
+        HTML is actually shorthand for <em>HyperText Markup Language</em>. It is the language of web pages 
+        that tells a browser how to display certain elements, such as text and images, through the use of 
+        codes and symbols.</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Introduction to HTML</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Introduction - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <p>HTML is the standard when it comes to creating web pages. The World Wide Web Consortium, or W3C, 
+        recommends it. Being such, most browsers implement HTML to help display web pages more or less uniformly.</p>
+
+    <p>HTML is the brainchild of <strong>Tim Berners-Lee</strong>. In 1990, Berners-Lee needed something 
+        that would help scientists from different colleges and universities access documents and research 
+        from other scientists. This problem led to Berners-Lee inventing the World Wide Web, the hypertext 
+        transfer protocol (HTTP), and HTML.</p>
+
+    <p><strong>Why learn HTML?</strong><br>
+        These days, the proliferation of content management systems (CMS) like WordPress, as well as HTML 
+        editors, can help you create a web page without knowing HTML. However, even with these tools, 
+        knowing how HTML works (plus knowing just the basic tags) can go a long way.</p>
+
+    <ul>
+        <li>HTML makes it easier to correct design flaws (e.g., fixing image alignment).</li>
+        <li>It’s simple and easy to learn, making it an essential skill for any aspiring web developer.</li>
+    </ul>
+
+    <p><strong>What you need to get started:</strong><br>
+        Learning HTML doesn’t require much. You can use a basic text editor like Notepad or a more advanced 
+        tool like an HTML editor or WYSIWYG editor (What You See Is What You Get). However, when learning, 
+        we recommend hardcoding HTML using a text editor to understand the structure and syntax better.</p>
+
+    <p>To get started with HTML, focus on these two things:</p>
+    <ul>
+        <li>The basic tags and elements.</li>
+        <li>The structure of an HTML page.</li>
+    </ul>
+</div>
+
+<!-- Complete Lesson Button -->
+
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson2' %}')">Next</button>
+    <button onclick="navigateTo('{% url 'note_list' %}')">My Notes</button>
+    <button onclick="navigateTo('{% url 'dev' %}')">Lessons</button>
+</div>
+{% endblock %}

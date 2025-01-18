@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lesson 2: Basic tags and elements{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="content-container">
+    <h2>Lesson 2: Basic tags and elements</h2>
+
+    <p><strong>Tags and Elements</strong><br>
+       In HTML, tags and elements are fundamental building blocks used to structure and present content on the web. Understanding the difference between tags, elements, and attributes is crucial for creating well-formed HTML documents.</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Basic Tags and Elements</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Elements - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <p><strong>Basic tags and elements:</strong><br> 
+    HTML is a markup language.As such, you will need to know the various tags and                
+    elements that it uses. 
+    Tags usually come in pairs. An opening tag will signify that the browser should treat the 
+    succeeding text using that tag's properties and a closing tag would end it. 
+    For example, the opening &lt;<u>strong</u>&gt; tag and its corresponding closing &lt;<u>/strong</u>&gt; tag will render all the text in between in bold. i.e., 
+    “My name is &lt;strong&gt;Peter Shako&lt;/strong&gt;” will be displayed as: 
+    <strong>My name is Peter Shako.</strong> 
+    And then there are what we call the "empty elements" or those that work without a 
+    closing or opening tag. Empty elements are often described as selfclosing tags.</p>
+
+
+
+    <p><strong>Empty Elements</strong></p>
+        <p>There are quite a few empty elements such as:</p> 
+
+    <ul>
+        <li>area</li>
+        <li>base</li>
+        <li>basefont</li>
+        <li>br</li>
+        <li>col</li>
+        <li>frame</li>
+        <li>hr</li>
+        <li>img</li>
+        <li>input</li>
+        <li>isindex</li>
+        <li>link</li>
+        <li>meta</li>
+        <li>param</li>
+    </ul>
+
+<br>
+    <p><strong>Structure of an HTML Page</strong></p>   
+    <p> HTML is very simple and it is logical.A browser would start reading an HTML page                
+from the top going down, from left going right. 
+ 
+It does follow a basic structure.First, you have to declare that the document is an                
+HTML document. You can do this by using the &lt;html&gt; tag. 
+ 
+Then there are the two other sections called the &lt;head&gt; and &lt;body&gt; of your              
+document. 
+ 
+The&lt;head&gt; is where you put in all the information you want to include about your                
+document. 
+ 
+The &lt;body&gt; is basically the content of your HTML document. 
+ 
+<p>Put in another way, the &lt;body&gt; section is what people see when they view your HTML                
+document. 
+Remember how you need to close a tag in HTML? You would also need to close 
+&lt;html&gt;, &lt;head&gt; and &lt;body&gt;, so that the basic HTML document would look like this: 
+&lt;html&gt; 
+&lt;head&gt; 
+&lt;/head&gt; 
+&lt;body&gt; 
+&lt;/body&gt; 
+&lt;/html&gt;
+Now you have the foundations of creating your first HTML page! </p></p>
+
+
+<p><strong>Tags, Attributes and Elements</strong></p>  
+<p>When learning about HTML, you will come across different resources that may use 
+HTML elements and tags interchangeably. Chances are, that's because they wanted to 
+simplify everything and make it easier for you to understand. However, there is a difference when you refer to HTML elements and HTML tags.</p>
+
+<p><strong>What's the difference?</strong></p> 
+<p>Technically, HTML documents contain only tags. When they are accessed on a browser, HTML documents are then parsed so that these could be displayed using the Document Object Model (DOM). The tags are there in the HTML document, but HTML elements only appear after the document has been parsed. 
+
+But let's not get into the technical stuff and instead simplify our lives by using what is commonly understood. To put it simply, HTML tags are the markup language that you use in HTML. These are generally the start or opening tag and the closing or ending tag. Tags are enclosed in angle brackets &lt; &gt;. 
+HTML elements, on the other hand, include the content. So, given this: &lt;p&gt;This is the difference between HTML elements and tags.&lt;/p&gt;. The tags here are &lt;p&gt; and &lt;/p&gt;, while the whole thing is called an HTML element. </p>
+
+<p><strong>HTML Elements</strong></p> 
+<p>Now that we have that out of the way, let's take a look at HTML elements. 
+An HTML element has the following syntax: 
+<ul>
+    <li>An HTML element begins with an opening or start tag, i.e., &lt;p&gt;.</li>
+    <li>An HTML element ends with a closing or end tag, i.e. &lt;/p&gt;.</li>
+    <li>The property of an HTML content is enclosed within the start and end tags, i.e., &lt;p&gt;This is the element content.&lt;/p&gt;.</li>
+    <li>It may also contain an attribute. </li>
+</ul></p>
+
+<p><strong>1. Empty Elements</strong>: Some HTML elements do have content and are simply called empty elements. These elements are ended or closed with the opening tag, i.e, &lt;br/&gt;.</p>
+
+<p><strong>2. Nestled Elements</strong>: Then there is also what is called the "nestled elements." Nestled elements are HTML elements that are found within other HTML elements. For example, this is a nestled element: 
+&lt;p&gt;I do not know &lt;strong&gt;what it was&lt;/strong&gt;.&lt;/p&gt; </p>
+ 
+
+<p><strong>3. Some Commonly Used HTML Tags Include:</strong> 
+<ul>
+<li>&lt;a&gt; which shows a hyperlink</li>
+<li>&lt;b&gt; which displays boldfaced text</li>
+<li>&lt;br&gt; which enters a line break into paragraphs</li>
+<li>&lt;div&gt; which introduces a section of the document</li>
+<li>&lt;em&gt; which shows emphasis</li>
+<li>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, through &lt;h6&gt; display HTML headings</li>
+<li>&lt;hr&gt; which inserts a horizontal rule</li>
+<li>&lt;p&gt; which introduces a paragraph</li>
+<li>&lt;table&gt; which introduces a table</li>
+</ul></p> 
+
+<p><strong>4. Uses of HTML elements</strong></p>
+<p>HTML elements serve a variety of purposes:</p>
+<ul>
+    <li>HTML elements can describe the purpose of the text, as well as give it structure. A good example of this type of HTML elements is &lt;h1&gt;, &lt;h2&gt; and other HTML headers. For instance, &lt;h1&gt;Introduction&lt;/h1&gt; communicates that "Introduction" is a first level heading. Take note that structural HTML elements only provide structure and do not have specific standards for display. A browser, however, can have default display for this type of elements, hence you often see header tags being bigger than normal text on your browser.</li>
+    <li>HTML elements can dictate how certain content would appear. For instance, using &lt;b&gt; would render the text in boldface, while using &lt;i&gt; will display the text in italics.</li>
+    <li>HTML elements that link your HTML document to another document. For instance, you can use &lt;a&gt; to link your document to another document.</li>
+</ul>
+
+<p><strong>2.3 Tips</strong></p>
+<ul>
+    <li>Always put in the closing tag. There are HTML elements that are not empty elements but may be written without a closing tag. Because browsers are able to recognize them, they present no problem. For example, the &lt;p&gt; element, which starts a paragraph, is often not closed. &lt;p&gt;This is what we are talking about. However, it is still best practice to close HTML elements. Most Web browsers will consider the closing tag for &lt;p&gt; optional and the paragraph will display properly. Yet, this would not be the case for all Web browsers. To be sure, always put the closing tag at the end. How is this case different from empty elements? An empty element is when no closing tags are required. Additionally, no closing tags exist or are allowed in empty elements. For example, &lt;br&gt; does not have a corresponding closing tag: &lt;/br&gt; does not exist in HTML. Whereas, technically, you would need to close the HTML element above by using &lt;/p&gt;.</li>
+    <li>Use lowercase when writing elements. HTML tags are not case sensitive. This means that you can write &lt;p&gt;, &lt;P&gt; or even &lt;/P&gt; or &lt;/p&gt;. However, standards and recommendations from the World Wide Web Consortium or W3C recommend using lowercase for HTML elements in HTML4 and requires it in XHTML. So you might as well start training yourself in writing HTML elements in lowercase.</li>
+</ul>
+
+
+</div>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson1' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'lesson3' %}')">Next</button>
+</div>
+{% endblock %}

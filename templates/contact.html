@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact Us - EduBridge
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #E7DDFF;
+        color: rgb(0, 0, 0);
+    }
+</style>
+
+<div class="container py-5">
+    <h1 class="text-primary text-center mb-4">Contact Us</h1>
+    <p class="lead text-center">
+        We'd love to hear from you! Feel free to reach out with any questions.
+    </p>
+
+    <!-- Contact Details -->
+    <div class="row mb-5">
+        <div class="col-md-4 text-center">
+            <div class="card shadow-sm border-0">
+                <div class="card-body" style="width: autopx; height: 110px;">
+                    <h5 class="card-title text-success">Address</h5>
+                    <p>Utumishi Co-op House, 1st Floor, Mamlaka Road, Nairobi, Kenya</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="card shadow-sm border-0">
+                <div class="card-body" style="width: autopx; height: 110px;">
+                    <h5 class="card-title text-danger">Email</h5>
+                    <p>petershako93@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="card shadow-sm border-0">
+                <div class="card-body" style="width: autopx; height: 110px;">
+                    <h5 class="card-title text-primary">Phone</h5>
+                    <p>+254 799589724</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h3 class="text-center text-primary mb-4">Send Us a Message</h3>
+            <form method="POST" action="{% url 'submit_contact' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Google Map Section -->
+    <div class="mb-5">
+    <br>
+        <h3 class="text-center text-success mb-4"><strong>Find Us on the Map</strong></h3>
+        <div class="ratio ratio-16x9">
+        <br>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14344.225788756926!2d36.8219465!3d-1.2920658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMTcnMzkuNCJTIDM2wrA0OScwMC45IkU!5e0!3m2!1sen!2ske!4v1691948832431!5m2!1sen!2ske" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}

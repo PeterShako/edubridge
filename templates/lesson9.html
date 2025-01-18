@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Form Fields{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="content-container">
+    <h2>Lesson 9: Form Fields</h2>
+    <p><strong>Form Fields</strong><br>
+     An HTML form is a section of a document which contains controls such as text fields, password fields, checkboxes, radio buttons, submit button, menus etc.An HTML form facilitates the user to enter data that is to be sent to the server for processing such as name, email address, password, phone number, etc. .</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Lesson 9: Form Fields</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Forms - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <br>
+
+    
+<div class="form-fields">
+    <h3>Form Fields</h3>
+    <p>Any HTML form can contain the following fields. First you have the input elements:</p>
+    <ul>
+        <li>Text</li>
+        <li>Password</li>
+        <li>Checkbox</li>
+        <li>Radio</li>
+        <li>Submit</li>
+        <li>Reset</li>
+        <li>File</li>
+        <li>Hidden</li>
+        <li>Image</li>
+        <li>Button</li>
+    </ul>
+    <p>There are also other input methods that may be used in an HTML form, including dropdown lists, radio buttons, check boxes, text areas and others. Let us see how each of these text elements is used in an HTML form.</p>
+    
+    <h4>Text Field</h4>
+    <p>A text field is just that, a field in your form where the user can enter a line of text. This is ideal for names, states, zip codes and other similar information that does not need too much space.</p>
+    <p>The syntax for a text field is as follows:</p>
+    <pre><code>&lt;input type="text" name="shortnameforfield"&gt;</code></pre>
+    <p>For example:</p>
+    <pre><code>School: &lt;input type="text" name="schoolname"&gt;</code></pre>
+    
+    <h4>Password</h4>
+    <p>Very much like a text field, but this one is especially earmarked for passwords and other sensitive data. Whatever you enter into the password field is masked.</p>
+    <p>The syntax for a password field is as follows:</p>
+    <pre><code>&lt;input type="password" name="passwd"&gt;</code></pre>
+    
+    <h4>Checkboxes</h4>
+    <p>A checkbox is used if you have a list of choices, a list from which you want the visitor to select as many options as possible or let them select none of the choices you provided.</p>
+    <pre><code>&lt;input type="checkbox" name="color" value="yes"&gt; Yes, I am interested!&lt;br&gt;
+&lt;input type="checkbox" name="color" value="no"&gt; No, do not contact me.</code></pre>
+    <p>If you want to have one of the options in your checkbox already checked (checked by default), you can use the checked attribute for that option. For example:</p>
+    <pre><code>&lt;input type="checkbox" name="color" value="yes" checked&gt; Yes, I am interested!&lt;br&gt;
+&lt;input type="checkbox" name="color" value="no"&gt; No, do not contact me.</code></pre>
+    
+    <h4>Radio Buttons</h4>
+    <p>Radio buttons are used when you have a set number of options and you only want to let your site's visitor to choose only one of these choices.</p>
+    <pre><code>&lt;input type="radio" name="reply" value="yay"&gt; Yup&lt;br&gt;
+&lt;input type="radio" name="reply" value="nay"&gt; Nope</code></pre>
+    
+    <h4>Submit</h4>
+    <p>The submit button allows your visitors to send their input to the server.</p>
+    <p>The correct syntax for the submit button is:</p>
+    <pre><code>&lt;input type="submit" value="Submit"&gt;</code></pre>
+    <p>You can use an image for your submit button, or simply an image button.</p>
+    <pre><code>&lt;input type="image" src="image.gif" name="image"&gt;</code></pre>
+    
+    <h4>Reset Button</h4>
+    <p>If the submit button sends all the inputs to a server, the reset button allows your users to clear the form or revert it back to its original state.</p>
+    <p>The correct syntax for the reset button is:</p>
+    <pre><code>&lt;input type="reset" value="Reset"&gt;</code></pre>
+    
+    <h4>Dropdown Menus</h4>
+    <p>Dropdown menus allow you to give your visitors a set number of options to choose from. Dropdown menus can function like a checkbox where you can choose more than one option. It can also work like a radio button wherein you are forced to choose only one option.</p>
+    <p>What's more, dropdown menus tend to take up less space than both checkboxes and radio buttons because you do not have to lay out everything. For example, with radio buttons and checkboxes, you would need to allot five lines for five options, but with a dropdown box you only have to allot one line.</p>
+    <p>The typical code for a dropdown box would be:</p>
+    <pre><code>&lt;select name="alphabets"&gt;
+    &lt;option value="a"&gt;A&lt;/option&gt;
+    &lt;option value="b"&gt;B&lt;/option&gt;
+    &lt;option value="c" selected&gt;C&lt;/option&gt;
+    &lt;option value="d"&gt;D&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    <p>Having the attribute "selected" would mean that when the dropdown box is first displayed on the page, it will show option "C" as the selected value (selected by default).</p>
+    <p>This HTML code will force your visitors to choose only one option. If you need to allow your visitors to choose more than one option, you just add the multiple attribute to the &lt;select&gt; tag, like so:</p>
+    <pre><code>&lt;select multiple name="alphabets"&gt;</code></pre>
+    
+    <h4>Text Area</h4>
+    <p>A textarea acts like a text field, only that you have more space than just one line. It is not defined by an &lt;input&gt; tag, but by a tag such as:</p>
+    <pre><code>&lt;textarea&gt;Input text here&lt;/textarea&gt;</code></pre>
+    <p>This will show a text box with the words "Input text here" filled in. You can also specify the number of rows and columns to control the size of your textbox, i.e., &lt;textarea rows="15" cols="20"&gt;</p>
+    <p>These are the different form fields that you can use in an HTML form.</p>
+</div>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson8' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'assessment' %}')">Take Test</button>
+</div>
+{% endblock %}

@@ -1,0 +1,1044 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Libraries
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libraries in Nairobi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E7DDFF;
+;
+        }
+
+
+        .county-card {
+            background-color:rgb(178, 227, 220);
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1180px;
+        }
+
+        .county-cardd {
+            background-color:rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif, bold;
+            color: orange;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1180px;
+            background-image: url('https://i.redd.it/qk0x5mv7m7x41.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            position: relative;
+        }
+
+        .county-cardd::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1); 
+            z-index: 1;
+            border-radius: 10px;
+        }
+
+        .county-cardd > * {
+            position: relative;
+            z-index: 2;
+            color: white; 
+        }
+        .county-cardd {
+            background-color:rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif, bold;
+            color: orange;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1180px;
+            background-image: url('https://i.redd.it/qk0x5mv7m7x41.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            position: relative;
+        }
+
+        .county-cardd::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            border-radius: 10px;
+            opacity: 91%;
+        }
+
+        .county-cardd > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .library {
+            margin-bottom: 20px;
+        }
+
+        .library h2 {
+            color:rgb(61, 93, 126);
+        }
+
+        .library p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .heading {
+            text-align: center;
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="county-cardd">
+    <p><h3>All public libraries in Kenya are managed by the Kenya National Library Service (KNLS), a statutory body of the Government of Kenya established in 1965 by an Act of Parliament, Cap 225 of the laws of Kenya. The KNLS is mandated to “promote, establish, equip, manage, maintain and develop libraries in Kenya.”</p>
+    <p>Libraries play a vital role in providing a serene environment where people can research and get valuable information to quench their thirst. They have amazing collections of books, creatively written to suit readers. Their inventories also have old newspapers dating back a few centuries.</h3></p>
+</div>
+
+
+
+<div class="county-card">
+    <h1 class="heading">Public Libraries in Nairobi County</h1>
+
+    <div class="library">
+        <h2>1. Kenya National Library Service (KNLS)</h2>
+        <p><strong>Location:</strong> Upper Hill, opposite NHIF Building.</p>
+        <p><strong>Services:</strong> Reading facilities, book lending, Internet and bureau services, Braille library services, mobile library services, and more.</p>
+        <p><strong>Entrance Fees:</strong> Daily Ksh 20 for adults, free for children. Membership: Registration fee Ksh 300, Annual fee Ksh 100.</p>
+        <p><strong>Opening Hours:</strong> Monday to Friday: 8 am to 6.30 pm, Saturday: 8.30 am to 5 pm. Closed on Sundays and public holidays.</p>
+        <p class="contact"><strong>Contact:</strong> Phone: +254 202739893/2739894/2739896</p>
+    </div>
+
+    <div class="library">
+        <h2>2. KNLS Buruburu Public Library</h2>
+        <p><strong>Location:</strong> Buruburu Phase 2, along Mumias South Road.</p>
+        <p><strong>Services:</strong> Reading facilities, book lending, Internet and bureau services, Braille library services, and more.</p>
+        <p><strong>Charges:</strong> Registration fee Ksh 300, Annual fee Ksh 100.</p>
+        <p><strong>Opening Hours:</strong> Monday to Friday: 8 am to 6.30 pm, Saturday: 8.30 am to 5 pm. Closed on Sundays and public holidays.</p>
+        <p class="contact"><strong>Email:</strong> <a href="mailto:publiclibrary@knls.ac.ke">publiclibrary@knls.ac.ke</a></p>
+    </div>
+
+    <div class="library">
+        <h2>3. McMillan Memorial Library</h2>
+        <p><strong>Location:</strong> Banda Street, next to Jamia Mosque.</p>
+        <p><strong>Services:</strong> Reading facilities, book lending, Africana section, and periodical section.</p>
+        <p><strong>Charges:</strong> Annual subscription: Adults Ksh 100, Children Ksh 50. Researchers: Ksh 200 a week.</p>
+        <p><strong>Opening Hours:</strong> Monday to Friday: 8 am to 6 pm. Closed on Saturdays, Sundays, and public holidays.</p>
+        <p class="contact"><strong>Contact:</strong> Phone: +254 020 721 2651</p>
+    </div>
+
+    <div class="library">
+        <h2>4. Rahimtulla Trust Library</h2>
+        <p><strong>Location:</strong> Mfangano Street, near the Central Bus Station.</p>
+        <p><strong>Services:</strong> Reading facilities, book lending, and periodicals section.</p>
+        <p><strong>Charges:</strong> Daily Ksh 30, Weekly Ksh 150, Monthly Ksh 500, Annual Ksh 4000.</p>
+        <p><strong>Opening Hours:</strong> Monday to Friday: 8 am to 6 pm. Closed on Saturdays, Sundays, and public holidays.</p>
+        <p class="contact"><strong>Contact:</strong> Phone: +254 (0)20 2312822</p>
+    </div>
+
+    <div class="library">
+        <h2>5. Kenya National Archives</h2>
+        <p><strong>Location:</strong> Moi Avenue, opposite the Hilton Hotel.</p>
+        <p><strong>Services:</strong> Reading facilities, book lending, rare African books, and public documents access.</p>
+        <p><strong>Charges:</strong> Annual membership Ksh 200.</p>
+        <p><strong>Opening Hours:</strong> Monday to Friday: 8.30 am to 4.30 pm, Saturday: 8.30 am to 1 pm. Closed on Sundays and public holidays.</p>
+        <p class="contact"><strong>Email:</strong> <a href="mailto:info@kenyarchives.go.ke">info@kenyarchives.go.ke</a></p>
+    </div>
+
+    <div class="library">
+        <h2>6. East African Herbarium Library</h2>
+        <p><strong>Location:</strong> Nairobi National Museum.</p>
+        <p><strong>Services:</strong> Reading facilities, book and journal lending, and botanical collections access.</p>
+        <p><strong>Opening Hours:</strong> Monday to Friday: 8 am to 5 pm.</p>
+        <p class="contact"><strong>Contact:</strong> Phone: +254 20 4448930</p>
+    </div>
+
+    <div class="library">
+        <h2>7. Jomo Kenyatta Memorial Library</h2>
+        <p><strong>Location:</strong> University of Nairobi main campus, off University Way.</p>
+        <p><strong>Services:</strong> Reading facilities, book lending, Internet and bureau services, binding services, university theses, and periodicals.</p>
+        <p><strong>Charges:</strong> Reading only: Daily Ksh 100, Monthly Ksh 500. External borrowers: Ksh 500 plus a refundable deposit of Ksh 3000.</p>
+        <p><strong>Opening Hours:</strong> During session: Monday to Friday 8 am to 10 pm, Saturday 8 am to 5 pm. During vacation: Monday to Friday 8 am to 5 pm, Saturday 8 am to noon. Closed on Sundays and public holidays.</p>
+        <p class="contact"><strong>Email:</strong> <a href="mailto:librarian@uonbi.ac.ke">librarian@uonbi.ac.ke</a></p>
+    </div>
+</div>
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libraries in Kenyan Counties</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+
+        body {
+            background-color: #E7DDFF;
+        }
+
+        
+        .nyeri {
+            margin-bottom: auto;
+            width: auto;
+            height: 410px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            width: auto;
+            height: 485px;
+        }
+
+        .nyeri:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.19s ease-in-out;
+        }    
+
+        .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.19s ease-in-out;
+        }
+
+    </style>    
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Libraries in Kenyan Counties</h1>
+
+        <div class="row">
+
+        
+        
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Mombasa County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Kenya National Library, Mombasa</strong><br>
+                                Location: Mombasa CBD<br>
+                                Contact: 0734-123456<br>
+                                Email: <a href="mailto:info@knls-mombasa.go.ke">info@knls-mombasa.go.ke</a>
+                            </li>
+                            <li>
+                                <strong>Mombasa Memorial Library</strong><br>
+                                Location: Moi Avenue<br>
+                                Contact: 0708-765432<br>
+                                Email: <a href="mailto:info@mmemorial.go.ke">info@mmemorial.go.ke</a>
+                            </li>
+                            <li>
+                                <strong>Swahili Cultural Library</strong><br>
+                                Location: Old Town, Mombasa<br>
+                                Contact: 0719-345678<br>
+                                Email: <a href="mailto:info@swahiliculturalibrary.go.ke">info@swahiliculturalibrary.go.ke</a>
+                            </li>
+                            <li>
+                                <strong>Fort Jesus Historical Archive</strong><br>
+                                Location: Fort Jesus Museum<br>
+                                Contact: 0723-567890<br>
+                                Email: <a href="mailto:info@fortjesus.go.ke">info@fortjesus.go.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Kisumu County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Kenya National Library, Kisumu</strong><br>
+                                Location: Kisumu CBD<br>
+                                Contact: 0724-123456<br>
+                                Email: <a href="mailto:info@knls-kisumu.go.ke">info@knls-kisumu.go.ke</a>
+                            </li>
+                            <li>
+                                <strong>Kisumu Public Library</strong><br>
+                                Location: Milimani Estate<br>
+                                Contact: 0712-234567<br>
+                                Email: <a href="mailto:info@kisumulibrary.go.ke">info@kisumulibrary.go.ke</a>
+                            </li>
+                            <li>
+                                <strong>Lake Victoria Resource Center</strong><br>
+                                Location: Oginga Odinga Road<br>
+                                Contact: 0721-987654<br>
+                                Email: <a href="mailto:info@lakevictoriacenter.go.ke">info@lakevictoriacenter.go.ke</a>
+                            </li>
+                            <li>
+                                <strong>Maseno University Library</strong><br>
+                                Location: Maseno Main Campus<br>
+                                Contact: 0733-567890<br>
+                                Email: <a href="mailto:library@maseno.ac.ke">library@maseno.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Baringo County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Kabarnet KNLS Library</strong><br>
+                                Location: Along Nakuru-Iten Road<br>
+                                Contact: 020 215 8364<br>
+                                Email: <a href="knlskabarnet@knls.ac.ke">knlskabarnet@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Meisori KNLS Library</strong><br>
+                                Location: Marigat-Lake Baringo Road, 10km from Marigat Town<br>
+                                Email: <a href="knlsmeisori@knls.ac.ke">knlsmeisori@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Eldama Ravine KNLS Library</strong><br>
+                                Location: Eldama Ravine, Off Milimani Saw Mill Road<br>
+                                Email: <a href="knlseldamaravine@knls.ac.ke">knlseldamaravine@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Bomet County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Silibwet KNLS Library</strong><br>
+                                Location: Along Leiten-Bomet Road, Silibwet<br>
+                                Contact: 020 215 8375<br>
+                                Email: <a href="knlssilibwet@knls.ac.ke">knlssilibwet@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Bungoma County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Kimilili KNLS Library</strong><br>
+                                Location: Kitale-Bungoma Road, next to Kimilili District Hospital<br>
+                                Contact: 020 215 8370<br>
+                                Email: <a href="knlskimilili@knls.ac.ke">knlskimilili@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Elgeyo Marakwet County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Lagam KNLS Library</strong><br>
+                                Location: Next to Lagam Catholic Church<br>
+                                Contact: 020 215 8365<br>
+                                Email: <a href="knlslagam@knls.ac.ke">knlslagam@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Embu County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Embu KNLS Library</strong><br>
+                                Location: Kenyatta Road, Embu Town<br>
+                                Contact: 020 215 8384<br>
+                                Email: <a href="knlsembu@knls.ac.ke">knlsembu@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mombasa County -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Garissa County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Garissa KNLS Library</strong><br>
+                                Location: Off Garissa-Dadaab Road, Opposite Administration Police<br>
+                                Contact: 020 215 8387<br>
+                                Email: <a href="knlsgarissa@knls.ac.ke">knlsgarissa@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Mbalambala KNLS Library</strong><br>
+                                Location: adjacent to Mbalambala District Hospital<br>
+                                Email: <a href="knlsmbalambala@knls.ac.ke">knlsmbalambala@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Masalani KNLS Library</strong><br>
+                                Location: Along Busia-Hola Road, next to Masalani Primary School<br>
+                                Contact: 020 215 8388<br>
+                                Email: <a href="knlsmasalani@knls.ac.ke">knlsmasalani@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Isiolo County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Isiolo KNLS Library</strong><br>
+                                Location: Next to the Isiolo IEBC Offices<br>
+                                Contact: 020 215 8374<br>
+                                Email: <a href="knlsisiolo@knls.ac.ke">knlsisiolo@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Kakamega County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Kakamega KNLS Library</strong><br>
+                                Location: Off Muruli Road, behind Mwalimu Centre<br>
+                                Contact: 020 215 8369<br>
+                                Email: <a href="knlskakamega@knls.ac.ke.">knlskakamega@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Lusumu KNLS Library</strong><br>
+                                Location: Shianda Nambacha Road, near St. Kizito Secondary School<br>
+                                Email: <a href="knlslusumu@knls.ac.ke">knlslusumu@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mombasa County -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Kericho County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Kericho KNLS Library</strong><br>
+                                Location: Along Kisumu Road, opposite South Western College.<br>
+                                Contact: 020 215 8367<br>
+                                Email: <a href="knlskericho@knls.ac.ke">knlskericho@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Kiambu County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Thika KNLS Library</strong><br>
+                                Location: General Kago Road, Thika Town<br>
+                                Contact: 020 215 8376<br>
+                                Email: <a href="knlsthika@knls.ac.ke">knlsthika@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Kilifi County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Kilifi KNLS Library</strong><br>
+                                Location: Bosa Road, near the Chief’s Office<br>
+                                Contact: 020 215 8398<br>
+                                Email: <a href="knlskilifi@knls.ac.ke">knlskilifi@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Malindi KNLS Library</strong><br>
+                                Location: Malindi-Lamu Road<br>
+				Contact: 020 215 8395<br>
+                                Email: <a href="knlsmalindi@knls.ac.ke">knlsmalindi@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Dzitsoni KNLS Library</strong><br>
+                                Location: Next to Dzitsoni Secondary School<br>
+				Contact: 020 215 8399<br>
+                                Email: <a href="knlsdzitsoni@knls.ac.ke">knlsdzitsoni@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mombasa County -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Kisii County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Kisii KNLS Library</strong><br>
+                                Location: Behind Barclays Bank<br>
+                                Contact: 020 215 8373<br>
+                                Email: <a href="knlskisii@knls.ac.ke">knlskisii@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Kitui County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Mwingi KNLS Library</strong><br>
+                                Location: Mwingi-Kyuso Road, beside Mwingi High School<br>
+                                Contact: 020 215 8386<br>
+                                Email: <a href="knlsmwingi@knls.ac.ke">knlsmwingi@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Kwale County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Kwale KNLS Library</strong><br>
+                                Location: Along Ukunda-Lunga Lunga Road<br>
+                                Contact: 020 213 4195<br>
+                                Email: <a href="knlskwale@knls.ac.ke">knlskwale@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mombasa County -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Laikipia County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Rumuruti KNLS Library</strong><br>
+                                Location: Off Nyahururu-Maralal Road, opposite Pagan Girls Secondary.<br>
+                                Contact: 020 215 8382<br>
+                                Email: <a href="knlsrumuruti@knls.ac.ke">knlsrumuruti@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Laikipia KNLS Library</strong><br>
+                                Location: Opposite the Kirimara Hotel<br>
+                                Contact: 020 215 8381<br>
+                                Email: <a href="knlslaikipia@knls.ac.ke">knlslaikipia@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Makueni County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Kithasyu KNLS Library</strong><br>
+                                Location: Next to Kithasyu Primary School and Chulu National Park<br>
+                                Contact: 020 215 8396<br>
+                                Email: <a href="knlskithasyu@knls.ac.ke">knlskithasyu@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Mutyambua KNLS Library</strong><br>
+                                Location: Sultan Hamud, next to the Chief’s Office<br>
+                                Contact: 020 215 8393<br>
+                                Email: <a href="knlsmutyambua@knls.ac.ke">knlsmutyambua@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Kinyambu KNLS Library</strong><br>
+                                Location: Kibwezi Town<br>
+                                Contact: 020 215 8394<br>
+                                Email: <a href="knlskinyambu@knls.ac.ke.">knlskinyambu@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Mandera County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Mandera KNLS Library</strong><br>
+                                Location: Off Isiolo-Mandera Road, next to the magistrate’s court.<br>
+                                Contact: 020 215 8392.<br>
+                                Email: <a href="knlsmandera@knls.ac.ke.">knlsmandera@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Marsabit County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Moyale KNLS Library</strong><br>
+                                Location: Within the Ministry of Health Offices Compound<br>
+                                Email: <a href="knlsmoyale@knls.ac.ke.e">knlsmoyale@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Meru County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Meru KNLS Library</strong><br>
+                                Location: Kenyatta Road, Meru Town.<br>
+                                Contact: 020 215 8385.<br>
+                                Email: <a href="knlsmeru@knls.ac.ke.">knlsmeru@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Mikombine KNLS Library</strong><br>
+                                Location: Nkubu<br>
+                                Contact: 020 215 8383.<br>
+                                Email: <a href="knlsmikombine@knls.ac.ke.">knlsmikombine@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Timau KNLS Library</strong><br>
+                                Location: Off Nanyuki-Meru Road, opposite Timau Catholic.<br>
+                                Email: <a href="knlstimau@knls.ac.ke.">knlstimau@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Gatimbi KNLS Library</strong><br>
+                                Location: Equator Junction, next to the Chief’s Camp<br>
+                                Email: <a href="knlsgatimbi@knls.ac.ke">knlsgatimbi@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Migori County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Awendo KNLS Library</strong><br>
+                                Location: Next to Sony Complex Primary School.<br>
+                                Email: <a href="knlsawendo@knls.ac.ke.">knlsawendo@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Muranga County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Muranga KNLS Library</strong><br>
+                                Location: Along Kenyatta Avenue.<br>
+                                Contact: 020 236 9592<br>
+                                Email: <a href="knlsmuranga@knls.ac.ke">knlsmuranga@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>John Michuki Memorial Library</strong><br>
+                                Location: Next to Kangema sub-county headquarters.<br>
+                                Contact: 020 215 8381<br>
+                                Email: <a href="knlskangema@knls.ac.ke.">knlskangema@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Nakuru County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Nakuru KNLS Library</strong><br>
+                                Location: Behind Christ the King Cathedral, off Moses Mudavadi Road.<br>
+                                Contact: 020 215 8362.<br>
+                                Email: <a href="knlsnakuru@knls.ac.ke.">knlsnakuru@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Naivasha KNLS Library</strong><br>
+                                Location: Barrier Karui Road.<br>
+                                Contact: 020 215 8361.<br>
+                                Email: <a href="knlsnaivasha@knls.ac.ke">knlsnaivasha@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Gilgil KNLS Library</strong><br>
+                                Location: opposite Gilgil Market, Bondeni Estate<br>
+                                Email: <a href="knlsgilgil@knls.ac.ke">knlsgilgil@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+
+
+            <!--Nandi-->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Nandi County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Kapsabet KNLS Library</strong><br>
+                                Location: Kapsabet-Eldoret Road, opposite Kapsabet Hospital.<br>
+                                Contact: 020 215 8366.<br>
+                                Email: <a href="knlskapsabet@knls.ac.ke.">knlskapsabet@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Narok County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Lelechonik KNLS Library</strong><br>
+                                Location: Leiben-Bomet Road<br>
+                                Email: <a href="knlslelechonik@knls.ac.ke.">knlslelechonik@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Narok KNLS Library</strong><br>
+                                Location: Along Narok-Sotik Road, opposite St. Mary’s School.<br>
+                                Email: <a href="knlsnarok@knls.ac.ke.">knlsnarok@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Nyandarua County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Ol Kalou KNLS Library</strong><br>
+                                Location: Opposite Ol Kalou Town Council Offices.<br>
+                                Contact: 020 213 4197.<br>
+                                Email: <a href="knlsolkalou@knls.ac.ke.">knlsolkalou@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="nyeri">
+                    <div class="card-header bg-primary text-white">Nyeri County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Nyeri KNLS Library</strong><br>
+                                Location: Kenyatta Avenue.<br>
+                                Contact: 020 215 8377.<br>
+                                Email: <a href="knlsnyeri@knls.ac.ke.">knlsnyeri@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Munyu KNLS Library</strong><br>
+                                Location: Off Nanyuki Road, 12km from Naromoru Town.<br>
+				                Contact: 020 215 8378<br>
+                                Email: <a href="knlsmunyu@knls.ac.ke">knlsmunyu@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Chinga KNLS Library</strong><br>
+                                Location: Next to Chinga Boys High.<br>
+				                Contact: 020 218 8300<br>
+                                Email: <a href="knlschinga@knls.ac.ke">knlschinga@knls.ac.ke</a>
+                            </li>
+			                <li>
+                                <strong>Karatina KNLS Library</strong><br>
+                                Location: Next to Karatina Law Courts<br>
+				                Contact: 020 215 8379<br>
+                                Email: <a href="knlskaratina@knls.ac.ke">knlskaratina@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Siaya County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Ukwala KNLS Library</strong><br>
+                                Location: Ukwala, Port Victoria-Ugunja Road<br>
+                                Contact: 020 215 8372<br>
+                                Email: <a href="knlsukwala@knls.ac.ke">knlsukwala@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Nyilima KNLS Library</strong><br>
+                                Location: Along Ndori-Uyoma Road.<br>
+                                Contact: 020 215 8371<br>
+                                Email: <a href="knlsnyilima@knls.ac.ke.">knlsnyilima@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Rambula KNLS Library</strong><br>
+                                Location: Ugunja Town.<br>
+                                Contact: 020 203 1867.<br>
+                                Email: <a href="knlsrambula@knls.ac.ke.">knlsrambula@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Taita Taveta County</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Wundanyi KNLS Library</strong><br>
+                                Location: Wundanyi, next to the Ministry of Lands Office.<br>
+                                Contact: 020 213 4196<br></li>
+                            <li>
+                                <strong>Mary Patch Turnbull Memorial KNLS Library</strong><br>
+                                Location: Next to Shimbo Secondary School, Wundanyi.<br>
+                                Email: <a href="knlswerugha@knls.ac.ke.">knlswerugha@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Voi Community KNLS Library</strong><br>
+                                Location: Opposite Voi Law Courts.<br>
+                                Email: <a href="knlsvoi@knls.ac.ke.">knlsvoi@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Uasin Ngishu County</div>
+                    <div class="card-body" style="background-color:rgb(226, 233, 240);">
+                        <ul>
+                            <li>
+                                <strong>Eldoret KNLS Library</strong><br>
+                                Location: Iten-Uganda Road Junction<br>
+                                Contact: 020 215 8363<br>
+                                Email: <a href="knlseldoret@knls.ac.ke.">knlseldoret@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Wajir County</div>
+                    <div class="card-body" style="background-color:rgb(223, 236, 229);">
+                        <ul>
+                            <li>
+                                <strong>Wajir KNLS Library</strong><br>
+                                Location: Wajir Town<br>
+                                Contact: 020 215 8340<br>
+                                Email: <a href="knlswajir@knls.ac.ke.">knlswajir@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Habaswein KNLS Library</strong><br>
+                                Location: Habaswein, opposite CDF offices<br>
+                                Contact: 020 215 8389<br>
+                                Email: <a href="knlshabaswein@knls.ac.ke">knlshabaswein@knls.ac.ke</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Wajir County(2)</div>
+                    <div class="card-body" style="background-color: #fff3cd;">
+                        <ul>
+                            <li>
+                                <strong>Bute KNLS Library</strong><br>
+                                Location: Next to Bute Girls High School<br>
+                                Email: <a href="knlsbute@knls.ac.ke">knlsbute@knls.ac.ke</a>
+                            </li>
+                            <li>
+                                <strong>Tarbaj KNLS Library</strong><br>
+                                Location: Next to Tarbaj District Hospital<br>
+                                Email: <a href="knlstarbaj@knls.ac.ke.">knlstarbaj@knls.ac.ke.</a>
+                            </li>
+                            <li>
+                                <strong>Griftu KNLS Library</strong><br>
+                                Location: 20km off Wajir-Moyale Road.<br>
+                                Email: <a href="knlsgriftu@knls.ac.ke.">knlsgriftu@knls.ac.ke.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+<div class="text-center my-4">
+    <a href="{% url 'courses' %}" class="btn btn-primary">View Courses</a>
+</div>
+
+{% endblock %}

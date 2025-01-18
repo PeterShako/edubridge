@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Tabular Data{% endblock %}
+
+{% block content %}
+<style>
+    body {
+            background-color: #E7DDFF;
+        }
+
+
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+    
+    .content-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .content-container h2 {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        line-height: 1.8;
+        color:rgb(0, 0, 0);
+        margin-bottom: 15px;
+    }
+
+    .content-container ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .content-container ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top: 20px;
+    }
+
+    .navigation button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .navigation button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<div class="content-container">
+
+    <h2>Lesson 6: Tabular Data</h2>
+    <p><strong>Tabular Data</strong><br>
+     HTML Tables allow you to arrange data into rows and columns on a web page, making it easy to display information like schedules, statistics, or other structured data in a clear format.</p>
+
+        <div class="video-container">
+        <h3>Watch the Video: Lesson 6: Tabular Data</h3>
+        <video width="auto" height="450" controls>
+            <source src="{% static 'videos/HTML - Tables - W3Schools.com.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <br>
+
+        <p>Tables enable you to easily present data and information in such a way that it is also easy to read and understand.
+        Tables are just a collection of cells. Or to be more accurate, it is just columns and rows of cells that contain information such as text, numbers, links, other tables, images and other content.</p>
+        <p>We are not going to make you think, however, that tables are a breeze to create in HTML. As you have more cells, columns and rows, you will find that the code you have to write becomes a little bit more unwieldy too.</p>
+        <p>Nevertheless, knowing the basics and practicing would allow you to get tables right.</p>
+        <h3>When to Use Tables and When Not to</h3>
+        <p>First, let us be clear that tables are not to be used for layouting, formatting and positioning. For example, if you need to have a blockquote, or spaces around images, do not use a table for it, you can get similar results using other HTML tags.</p>
+        <p>You should only use tables if you have to present data. If your content makes sense when you use a spreadsheet to present it, then you should use a table to put it on an HTML document.</p>
+        <h3>Creating Tables</h3>
+        <p>The <code>&lt;table&gt;</code> tag defines all tables in an HTML document. To make it easier for you to hardcode your table, you should always remember that HTML tables work first with rows (designated by the <code>&lt;tr&gt;</code> tag), then columns (defined by the <code>&lt;td&gt;</code> tag).</p>
+        <p>Let us start with just one cell. To do this, use the following code:</p>
+        <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+    &lt;td&gt;one cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+        <p>This will show up as:</p>
+        <table border="1">
+            <tr>
+                <td>one cell</td>
+            </tr>
+        </table>
+        <p>The border attribute shows the gridlines for your table. Next, try to create a table with just one row, but three different columns.</p>
+        <h4>One row, multi column:</h4>
+        <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+    &lt;td&gt;column 1&lt;/td&gt;
+    &lt;td&gt;column 2&lt;/td&gt;
+    &lt;td&gt;column 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+        <p>If you need to have four columns, just add another <code>&lt;td&gt;</code>. The number of <code>&lt;td&gt;</code> lines would correspond to the number of columns you have in your table.</p>
+        <p>This will show up as:</p>
+        <table border="1">
+            <tr>
+                <td>column 1</td>
+                <td>column 2</td>
+                <td>column 3</td>
+            </tr>
+        </table>
+        <p>Now for something a little more challenging, why not try to have a table with two rows and three columns?</p>
+        <pre><code>&lt;table border="1"&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Row 1, Column 1&lt;/td&gt;
+    &lt;td&gt;Row 1, Column 2&lt;/td&gt;
+    &lt;td&gt;Row 1, Column 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Row 2, Column 1&lt;/td&gt;
+    &lt;td&gt;Row 2, Column 2&lt;/td&gt;
+    &lt;td&gt;Row 2, Column 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+        <p>As you can see, there are two different sets for <code>&lt;tr&gt;</code>, which would mean that the table would have two rows. Three <code>&lt;td&gt;</code> tags for each <code>&lt;tr&gt;</code> set would mean that each row has three columns.</p>
+        <p>This code will show as:</p>
+        <table border="1">
+            <tr>
+                <td>Row 1, Column 1</td>
+                <td>Row 1, Column 2</td>
+                <td>Row 1, Column 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Column 1</td>
+                <td>Row 2, Column 2</td>
+                <td>Row 2, Column 3</td>
+            </tr>
+        </table>
+
+<!-- Complete Lesson Button -->
+<div class="navigation">
+    <button onclick="navigateTo('{% url 'courses' %}')">Back to Courses</button>
+    <button onclick="navigateTo('{% url 'lesson5' %}')">Previous</button>
+    <button onclick="navigateTo('{% url 'lesson7' %}')">Next</button>
+</div>
+{% endblock %}
