@@ -19,6 +19,7 @@ def main():
     execute_from_command_line(sys.argv)
 #pythonmanage.pyrunserver
 
+
 if __name__ == '__main__':
     main()
 
