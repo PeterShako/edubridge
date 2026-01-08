@@ -23,7 +23,8 @@
         }
         .navbar {
             margin-bottom: 30px;
-        }
+        } 
+        
         .header {
             background-color: #343a40;
             color: white;
@@ -36,21 +37,25 @@
         }  .header h1 {
             font-size: 3em;
         }
+        
         .header p {
             font-size: 1.2em;
         }
+        
         .content {
             padding: 30px;
             background-color: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
+        
         .footer {
             background-color: #343a40;
             color: white;
             padding: 15px;
             text-align: center;
         }
+        
         .card-title {
             font-size: 1.2em;
         }
@@ -84,6 +89,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'courses' %}">Courses</a>
                 </li>
@@ -95,13 +101,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'wikipedia' %}">Wikipedia</a>
                 </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'donate' %}">Donate</a>
                 </li>
+                
                 {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Logout ({{ user.username }})</a>
                     </li>
+                
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
